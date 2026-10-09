@@ -1,260 +1,256 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Udhayaa Textile Processing</title>
     <meta name="description" content="Explore our fabric processing services, including solid-dyed and printed fabrics.">
-    <meta property="og:title" content="Services | Udhayaa Textile Processing">
-    <meta property="og:description" content="Explore our fabric processing services, including solid-dyed and printed fabrics.">
-    <meta property="og:type" content="website">
-        <link rel="icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
+    <link rel="icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/js/tailwind-config.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    
+    <style>
+        .nav-link.active {
+            color: #1c523c; /* utp-green */
+            font-weight: 700;
+            border-left-color: #1c523c;
+            background-color: #f9fafb;
+        }
+    </style>
 </head>
-<body class="antialiased">
+<body class="antialiased bg-gray-50">
     
     <utp-header></utp-header>
 
-    <!-- MAIN CONTENT -->
     <main id="main-content">
-        <section class="bg-gray-50 py-16 border-b border-gray-200">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold font-heading text-utp-charcoal mb-4">Greige-to-Finished Fabric Processing</h1>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">We supply solid-dyed, printed, and finished fabrics aligned exactly to your technical specifications.</p>
+        <!-- Premium Hero -->
+        <section class="bg-utp-green text-white py-20 lg:py-28 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-40 bg-[url('assets/images/services/solid_dyed_fabric.jpg')] bg-cover bg-center mix-blend-overlay"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent"></div>
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 md:p-12 rounded-2xl shadow-2xl max-w-4xl w-full reveal-item reveal-visible">
+                    <p class="text-sm font-bold text-utp-gold tracking-widest uppercase mb-4 drop-shadow-md">OUR CAPABILITIES</p>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 text-white drop-shadow-lg">Precision Fabric Processing</h1>
+                    <p class="text-lg md:text-xl text-gray-100 font-medium mb-8 max-w-3xl mx-auto drop-shadow-md">We supply solid-dyed, printed, and finished fabrics engineered precisely to your technical export specifications.</p>
+                </div>
             </div>
         </section>
 
-        <section class="py-20 bg-white">
+        <!-- Interactive Service Explorer -->
+        <section class="py-20 bg-white relative">
             <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Intro -->
-                <div class="mb-16 max-w-3xl">
-                    <h2 class="text-3xl font-bold font-heading text-utp-charcoal mb-4">Comprehensive Processing Capabilities</h2>
-                    <p class="text-gray-600 text-lg mb-8">Our Erode-based facility handles the complete transition from raw greige fabric to finished, export-ready material. We specialize exclusively in woven fabrics for various B2B applications.</p>
+                <div class="flex flex-col lg:flex-row gap-12">
                     
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm text-gray-700 bg-gray-50 p-6 rounded border border-gray-100">
-                        <div>
-                            <span class="font-bold text-utp-green block mb-3 text-base">Pretreatment & Dyeing Machinery:</span>
-                            <ul class="list-disc pl-4 space-y-2">
-                                <li>Singeing (72") & Crinkle Wash (120")</li>
-                                <li>Jigger Desizing (84") & Tub Desizing (120")</li>
-                                <li>Dyeing Range (84")</li>
-                                <li>Zero & Zero (74") & Mangal Wash (95")</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <span class="font-bold text-utp-green block mb-3 text-base">Advanced Finishing Machinery:</span>
-                            <ul class="list-disc pl-4 space-y-2">
-                                <li>Lamperti Double Decker (95") & Brushing (95")</li>
-                                <li>Peach Finishing (72") & Xetma Imported Peach (66")</li>
-                                <li>Drum Wash & Winch Wash (120")</li>
-                                <li>Open Stenter Felt & Roll Packing (84")</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="space-y-16">
-                    <!-- Solid-Dyed -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div class="order-2 lg:order-1 aspect-[4/3] bg-gray-200 rounded-sm overflow-hidden relative border border-gray-100">
-                            <img src="assets/images/services/solid_dyed_fabric.jpg" alt="Solid Dyed Fabric Processing" class="w-full h-full object-cover">
-                        </div>
-                        <div class="order-1 lg:order-2">
-                            <h3 class="text-2xl font-bold font-heading text-utp-green mb-4">Solid-Dyed Fabrics</h3>
-                            <p class="text-gray-600 mb-4">Achieving consistent, even coloring across large fabric batches requires precise technical control. We offer rigorous solid dyeing processes that match your approved shade cards exactly.</p>
-                            <ul class="space-y-2 mb-6">
-                                <li class="flex items-start">
-                                    <svg class="h-5 w-5 text-utp-gold mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                                    <span class="text-gray-700">Strict shade matching and lab-dip approvals</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="h-5 w-5 text-utp-gold mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                                    <span class="text-gray-700">High color fastness for export standards</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="h-5 w-5 text-utp-gold mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                                    <span class="text-gray-700">Consistent results across multiple dye lots</span>
-                                </li>
-                            </ul>
+                    <!-- Sticky Side Navigation -->
+                    <div class="hidden lg:block lg:w-1/4">
+                        <div class="sticky top-28 bg-white border border-gray-100 shadow-sm rounded-xl p-6">
+                            <h3 class="font-bold font-heading text-xl text-utp-charcoal mb-6">Service Explorer</h3>
+                            <nav class="flex flex-col space-y-2" id="service-nav">
+                                <a href="#solid-dyed" class="nav-link px-4 py-3 text-gray-500 border-l-4 border-transparent hover:bg-gray-50 transition-colors rounded-r-lg">Solid-Dyed Fabrics</a>
+                                <a href="#printed" class="nav-link px-4 py-3 text-gray-500 border-l-4 border-transparent hover:bg-gray-50 transition-colors rounded-r-lg">Printed Fabrics</a>
+                                <a href="#finishing" class="nav-link px-4 py-3 text-gray-500 border-l-4 border-transparent hover:bg-gray-50 transition-colors rounded-r-lg">Finished-Fabric Processing</a>
+                                <a href="#coatings" class="nav-link px-4 py-3 text-gray-500 border-l-4 border-transparent hover:bg-gray-50 transition-colors rounded-r-lg">Signature Coatings</a>
+                                <a href="#standards" class="nav-link px-4 py-3 text-gray-500 border-l-4 border-transparent hover:bg-gray-50 transition-colors rounded-r-lg">Technical Standards</a>
+                            </nav>
                         </div>
                     </div>
 
-                    <!-- Printed -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <h3 class="text-2xl font-bold font-heading text-utp-green mb-4">Printed Fabrics</h3>
-                            <p class="text-gray-600 mb-4">Our printing capabilities are geared towards handling complex patterns and multi-color designs with excellent registration and clarity.</p>
-                            <ul class="space-y-2 mb-6">
-                                <li class="flex items-start">
-                                    <svg class="h-5 w-5 text-utp-gold mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                                    <span class="text-gray-700">Sharp design registration and clarity</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="h-5 w-5 text-utp-gold mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                                    <span class="text-gray-700">Variety of printing techniques supported</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="h-5 w-5 text-utp-gold mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                                    <span class="text-gray-700">Durable prints that withstand industrial washing</span>
-                                </li>
-                            </ul>
+                    <!-- Main Content Sections -->
+                    <div class="w-full lg:w-3/4 space-y-24">
+                        
+                        <!-- Solid-Dyed -->
+                        <div id="solid-dyed" class="scroll-mt-28 reveal-item">
+                            <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col md:flex-row">
+                                <div class="md:w-1/2">
+                                    <img src="assets/images/services/solid_dyed_fabric.jpg" alt="Solid Dyed Fabric Processing" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-8 md:p-12 md:w-1/2 flex flex-col justify-center">
+                                    <h2 class="text-3xl font-bold font-heading text-utp-green mb-4">Solid-Dyed Fabrics</h2>
+                                    <p class="text-gray-600 mb-6 leading-relaxed">Achieving consistent, even coloring across large fabric batches requires precise technical control. We offer rigorous solid dyeing processes that match your approved shade cards exactly.</p>
+                                    <ul class="space-y-3 mb-8">
+                                        <li class="flex items-start"><svg class="h-5 w-5 text-utp-gold mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span class="text-gray-700 font-medium">Strict shade matching and lab-dip approvals</span></li>
+                                        <li class="flex items-start"><svg class="h-5 w-5 text-utp-gold mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span class="text-gray-700 font-medium">High color fastness for export standards</span></li>
+                                        <li class="flex items-start"><svg class="h-5 w-5 text-utp-gold mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span class="text-gray-700 font-medium">Consistent results across multiple dye lots</span></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="aspect-[4/3] bg-gray-200 rounded-sm overflow-hidden relative border border-gray-100">
-                            <img src="assets/images/services/printed_fabric.jpg" alt="Printed Fabric Rolls" class="w-full h-full object-cover">
-                        </div>
-                    </div>
 
-                    <!-- Finished-Fabric -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div class="order-2 lg:order-1 aspect-[4/3] bg-gray-200 rounded-sm overflow-hidden relative border border-gray-100">
-                            <img src="assets/images/services/finished_fabric.jpg" alt="Finished Fabric Processing" class="w-full h-full object-cover">
+                        <!-- Printed -->
+                        <div id="printed" class="scroll-mt-28 reveal-item">
+                            <div class="bg-white rounded-2xl overflow-hidden shadow-xl border border-gray-100 flex flex-col md:flex-row-reverse transform transition-transform hover:-translate-y-1">
+                                <div class="md:w-1/2">
+                                    <img src="assets/images/services/printed_fabric.jpg" alt="Printed Fabric Rolls" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-8 md:p-12 md:w-1/2 flex flex-col justify-center">
+                                    <h2 class="text-3xl font-bold font-heading text-utp-green mb-4">Printed Fabrics</h2>
+                                    <p class="text-gray-600 mb-6 leading-relaxed">Our printing capabilities are geared towards handling complex patterns and multi-color designs with excellent registration and clarity.</p>
+                                    <ul class="space-y-3 mb-8">
+                                        <li class="flex items-start"><svg class="h-5 w-5 text-utp-gold mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span class="text-gray-700 font-medium">Sharp design registration and clarity</span></li>
+                                        <li class="flex items-start"><svg class="h-5 w-5 text-utp-gold mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span class="text-gray-700 font-medium">Variety of printing techniques supported</span></li>
+                                        <li class="flex items-start"><svg class="h-5 w-5 text-utp-gold mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span class="text-gray-700 font-medium">Durable prints that withstand industrial washing</span></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="order-1 lg:order-2">
-                            <h3 class="text-2xl font-bold font-heading text-utp-green mb-4">Finished-Fabric Processing</h3>
-                            <p class="text-gray-600 mb-4">The final touch determines the fabric's usability. We apply specialized finishing treatments to achieve the required hand feel, dimensional stability, and specific performance characteristics.</p>
-                            <ul class="space-y-2 mb-6">
-                                <li class="flex items-start">
-                                    <svg class="h-5 w-5 text-utp-gold mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                                    <span class="text-gray-700">Controlled shrinkage and dimensional stability</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="h-5 w-5 text-utp-gold mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                                    <span class="text-gray-700">Customized hand-feel and texture modification</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="h-5 w-5 text-utp-gold mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                                    <span class="text-gray-700">Defect-checking and secure packing</span>
-                                </li>
-                            </ul>
+
+                        <!-- Finishing -->
+                        <div id="finishing" class="scroll-mt-28 reveal-item">
+                            <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col md:flex-row">
+                                <div class="md:w-1/2">
+                                    <img src="assets/images/services/finished_fabric.jpg" alt="Finished Fabric Processing" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-8 md:p-12 md:w-1/2 flex flex-col justify-center">
+                                    <h2 class="text-3xl font-bold font-heading text-utp-green mb-4">Finished-Fabric Processing</h2>
+                                    <p class="text-gray-600 mb-6 leading-relaxed">The final touch determines the fabric's usability. We apply specialized finishing treatments to achieve the required hand feel, dimensional stability, and specific performance characteristics.</p>
+                                    <ul class="space-y-3 mb-8">
+                                        <li class="flex items-start"><svg class="h-5 w-5 text-utp-gold mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span class="text-gray-700 font-medium">Controlled shrinkage and dimensional stability</span></li>
+                                        <li class="flex items-start"><svg class="h-5 w-5 text-utp-gold mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span class="text-gray-700 font-medium">Customized hand-feel and texture modification</span></li>
+                                        <li class="flex items-start"><svg class="h-5 w-5 text-utp-gold mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span class="text-gray-700 font-medium">Defect-checking and secure packing</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Interactive Machinery List -->
+                            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-white border border-gray-200 rounded-lg p-6 group hover:border-utp-green transition-colors shadow-sm">
+                                    <span class="font-bold text-utp-green block mb-3 text-lg flex items-center justify-between">
+                                        Pretreatment & Dyeing Machinery
+                                        <svg class="w-5 h-5 text-gray-400 group-hover:text-utp-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                                    </span>
+                                    <ul class="list-disc pl-4 space-y-1 text-gray-600 text-sm">
+                                        <li>Singeing (72") & Crinkle Wash (120")</li>
+                                        <li>Jigger Desizing (84") & Tub Desizing (120")</li>
+                                        <li>Dyeing Range (84")</li>
+                                        <li>Zero & Zero (74") & Mangal Wash (95")</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-white border border-gray-200 rounded-lg p-6 group hover:border-utp-green transition-colors shadow-sm">
+                                    <span class="font-bold text-utp-green block mb-3 text-lg flex items-center justify-between">
+                                        Advanced Finishing Machinery
+                                        <svg class="w-5 h-5 text-gray-400 group-hover:text-utp-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                                    </span>
+                                    <ul class="list-disc pl-4 space-y-1 text-gray-600 text-sm">
+                                        <li>Lamperti Double Decker (95") & Brushing (95")</li>
+                                        <li>Peach Finishing (72") & Xetma Imported Peach (66")</li>
+                                        <li>Drum Wash & Winch Wash (120")</li>
+                                        <li>Open Stenter Felt & Roll Packing (84")</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- SECTION: Specialty Coatings & Finishes -->
-        <section class="py-20 bg-white border-t border-gray-200">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16 max-w-3xl mx-auto">
-                    <h2 class="text-3xl font-bold font-heading text-utp-charcoal mb-4">Signature Coatings & Functional Finishes</h2>
-                    <p class="text-gray-600 text-lg">We engineer fabrics to perform under demanding conditions. Our specialty coatings deliver industrial-grade protection and premium aesthetics.</p>
-                </div>
+                        <!-- Coatings -->
+                        <div id="coatings" class="scroll-mt-28 pt-8 border-t border-gray-200 reveal-item">
+                            <h2 class="text-3xl font-bold font-heading text-utp-charcoal mb-4">Signature Coatings & Functional Finishes</h2>
+                            <p class="text-gray-600 text-lg mb-10">We engineer fabrics to perform under demanding conditions. Our specialty coatings deliver industrial-grade protection and premium aesthetics.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                                <!-- Coating items generated dynamically below to keep HTML clean -->
+                                <script>
+                                    const coatings = [
+                                        { id: '01', title: 'Heat Resistant Silver', desc: 'Advanced heat-resistant coating technology for thermal protection.', app: 'Protective Wear, Heat Shields' },
+                                        { id: '02', title: 'Anti Fray', desc: 'Minimizes yarn fraying along fabric edges, improving durability.', app: 'Apparel, Uniforms, Home Textiles' },
+                                        { id: '03', title: 'PU + Water Repellent', desc: 'Advanced PU coated woven fabric with superior water repellent properties.', app: 'Outdoor Furniture, Bags, Jackets' },
+                                        { id: '04', title: 'Anti Skid', desc: 'Specialized coated woven fabric providing enhanced grip and stability.', app: 'Floor Mats, Footwear, Safety Products' },
+                                        { id: '05', title: 'PVC Glossy', desc: 'Premium PVC coated woven fabric delivering a smooth glossy finish.', app: 'Table Covers, Bags, Outdoor' },
+                                        { id: '06', title: 'Acrylic + Water Repellent', desc: 'Engineered with water repellent technology for outdoor durability.', app: 'Outdoor Cushions, Canopies' },
+                                        { id: '07', title: 'Stainguard + Coating', desc: 'Designed to resist everyday stains while maintaining fabric appearance.', app: 'Hospitality, Restaurants' },
+                                        { id: '08', title: 'Stiff Coating', desc: 'High performance stiff coated woven fabric for structural stability.', app: 'Bags, Industrial Products, Belts' },
+                                        { id: '09', title: 'PVC Matty', desc: 'Premium PVC Matte coated fabric featuring a non-reflective surface.', app: 'Bags, Wallets, Decorative Products' }
+                                    ];
+                                    coatings.forEach(c => {
+                                        document.write(`
+                                        <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 hover:border-utp-green hover:shadow-lg transition-all duration-300 group relative overflow-hidden">
+                                            <div class="absolute -right-4 -top-4 text-[100px] font-black text-gray-200/50 group-hover:text-utp-gold/20 transition-colors duration-500 z-0 leading-none">${c.id}</div>
+                                            <div class="relative z-10">
+                                                <h3 class="text-xl font-bold text-utp-charcoal mb-3">${c.title}</h3>
+                                                <p class="text-sm text-gray-600 mb-6">${c.desc}</p>
+                                                <p class="text-[10px] font-bold text-utp-green uppercase tracking-wider bg-utp-green/10 inline-block px-3 py-1 rounded-full">${c.app}</p>
+                                            </div>
+                                        </div>
+                                        `);
+                                    });
+                                </script>
+                            </div>
+                        </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Finish 1 -->
-                    <div class="bg-gray-50 p-8 rounded border border-gray-100 hover:border-utp-green transition-colors group card">
-                        <div class="text-4xl font-extrabold text-gray-200 mb-2 group-hover:text-utp-gold transition-colors">01</div>
-                        <h3 class="text-xl font-bold text-utp-charcoal mb-3">Heat Resistant Silver</h3>
-                        <p class="text-sm text-gray-600 mb-4">Advanced heat-resistant coating technology for thermal protection and industrial-grade performance.</p>
-                        <p class="text-xs font-semibold text-utp-green uppercase tracking-wide">Protective Wear, Heat Shields, Industrial Covers</p>
-                    </div>
-                    <!-- Finish 2 -->
-                    <div class="bg-gray-50 p-8 rounded border border-gray-100 hover:border-utp-green transition-colors group card">
-                        <div class="text-4xl font-extrabold text-gray-200 mb-2 group-hover:text-utp-gold transition-colors">02</div>
-                        <h3 class="text-xl font-bold text-utp-charcoal mb-3">Anti Fray</h3>
-                        <p class="text-sm text-gray-600 mb-4">Minimizes yarn fraying along fabric edges, improving durability during cutting and stitching.</p>
-                        <p class="text-xs font-semibold text-utp-green uppercase tracking-wide">Apparel, Uniforms, Home Textiles</p>
-                    </div>
-                    <!-- Finish 3 -->
-                    <div class="bg-gray-50 p-8 rounded border border-gray-100 hover:border-utp-green transition-colors group card">
-                        <div class="text-4xl font-extrabold text-gray-200 mb-2 group-hover:text-utp-gold transition-colors">03</div>
-                        <h3 class="text-xl font-bold text-utp-charcoal mb-3">PU + Water Repellent</h3>
-                        <p class="text-sm text-gray-600 mb-4">Advanced PU coated woven fabric with superior water repellent properties for outdoor performance.</p>
-                        <p class="text-xs font-semibold text-utp-green uppercase tracking-wide">Outdoor Furniture, Bags, Jackets</p>
-                    </div>
-                    <!-- Finish 4 -->
-                    <div class="bg-gray-50 p-8 rounded border border-gray-100 hover:border-utp-green transition-colors group card">
-                        <div class="text-4xl font-extrabold text-gray-200 mb-2 group-hover:text-utp-gold transition-colors">04</div>
-                        <h3 class="text-xl font-bold text-utp-charcoal mb-3">Anti Skid</h3>
-                        <p class="text-sm text-gray-600 mb-4">Specialized coated woven fabric providing enhanced grip, stability and safety across multiple uses.</p>
-                        <p class="text-xs font-semibold text-utp-green uppercase tracking-wide">Floor Mats, Footwear, Safety Products</p>
-                    </div>
-                    <!-- Finish 5 -->
-                    <div class="bg-gray-50 p-8 rounded border border-gray-100 hover:border-utp-green transition-colors group card">
-                        <div class="text-4xl font-extrabold text-gray-200 mb-2 group-hover:text-utp-gold transition-colors">05</div>
-                        <h3 class="text-xl font-bold text-utp-charcoal mb-3">PVC Glossy</h3>
-                        <p class="text-sm text-gray-600 mb-4">Premium PVC coated woven fabric delivering a smooth glossy finish with excellent water resistance.</p>
-                        <p class="text-xs font-semibold text-utp-green uppercase tracking-wide">Table Covers, Bags, Outdoor Products</p>
-                    </div>
-                    <!-- Finish 6 -->
-                    <div class="bg-gray-50 p-8 rounded border border-gray-100 hover:border-utp-green transition-colors group card">
-                        <div class="text-4xl font-extrabold text-gray-200 mb-2 group-hover:text-utp-gold transition-colors">06</div>
-                        <h3 class="text-xl font-bold text-utp-charcoal mb-3">Acrylic + Water Repellent</h3>
-                        <p class="text-sm text-gray-600 mb-4">Engineered with water repellent technology for long-term outdoor durability and color retention.</p>
-                        <p class="text-xs font-semibold text-utp-green uppercase tracking-wide">Outdoor Cushions, Canopies, Patios</p>
-                    </div>
-                    <!-- Finish 7 -->
-                    <div class="bg-gray-50 p-8 rounded border border-gray-100 hover:border-utp-green transition-colors group card">
-                        <div class="text-4xl font-extrabold text-gray-200 mb-2 group-hover:text-utp-gold transition-colors">07</div>
-                        <h3 class="text-xl font-bold text-utp-charcoal mb-3">Stainguard + Coating</h3>
-                        <p class="text-sm text-gray-600 mb-4">Designed to resist everyday stains while maintaining fabric appearance and easy maintenance.</p>
-                        <p class="text-xs font-semibold text-utp-green uppercase tracking-wide">Hospitality, Restaurants, Home Furnishing</p>
-                    </div>
-                    <!-- Finish 8 -->
-                    <div class="bg-gray-50 p-8 rounded border border-gray-100 hover:border-utp-green transition-colors group card">
-                        <div class="text-4xl font-extrabold text-gray-200 mb-2 group-hover:text-utp-gold transition-colors">08</div>
-                        <h3 class="text-xl font-bold text-utp-charcoal mb-3">Stiff Coating</h3>
-                        <p class="text-sm text-gray-600 mb-4">High performance stiff coated woven fabric developed to provide enhanced structural stability.</p>
-                        <p class="text-xs font-semibold text-utp-green uppercase tracking-wide">Bags, Industrial Products, Belts</p>
-                    </div>
-                    <!-- Finish 9 -->
-                    <div class="bg-gray-50 p-8 rounded border border-gray-100 hover:border-utp-green transition-colors group card">
-                        <div class="text-4xl font-extrabold text-gray-200 mb-2 group-hover:text-utp-gold transition-colors">09</div>
-                        <h3 class="text-xl font-bold text-utp-charcoal mb-3">PVC Matty</h3>
-                        <p class="text-sm text-gray-600 mb-4">Premium PVC Matte coated fabric featuring a smooth non-reflective surface with excellent durability.</p>
-                        <p class="text-xs font-semibold text-utp-green uppercase tracking-wide">Bags, Wallets, Decorative Products</p>
+                        <!-- Technical Standards -->
+                        <div id="standards" class="scroll-mt-28 pt-8 border-t border-gray-200 reveal-item">
+                            <h2 class="text-3xl font-bold font-heading text-utp-charcoal mb-8">Technical Service Standard</h2>
+                            <div class="bg-white border border-gray-200 shadow-xl rounded-2xl overflow-hidden">
+                                <table class="w-full text-left border-collapse">
+                                    <tbody>
+                                        <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                            <th class="py-5 px-8 bg-gray-50/50 text-gray-900 font-semibold w-1/3 border-r border-gray-100">Fabric Suitability</th>
+                                            <td class="py-5 px-8 text-gray-700">100% Cotton woven fabrics, blends, and specialized home textile constructions.</td>
+                                        </tr>
+                                        <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                            <th class="py-5 px-8 bg-gray-50/50 text-gray-900 font-semibold border-r border-gray-100">GSM Range</th>
+                                            <td class="py-5 px-8 text-gray-700">Typically handling standard export weights (specific GSM requirements assessed upon enquiry).</td>
+                                        </tr>
+                                        <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                            <th class="py-5 px-8 bg-gray-50/50 text-gray-900 font-semibold border-r border-gray-100">Output Quality</th>
+                                            <td class="py-5 px-8 text-gray-700">Export-grade fastness, verified shade matching, and controlled shrinkage parameters.</td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50 transition-colors">
+                                            <th class="py-5 px-8 bg-gray-50/50 text-gray-900 font-semibold border-r border-gray-100">Minimum Order Quantity</th>
+                                            <td class="py-5 px-8 text-gray-700">Evaluated per requirement to ensure economic viability and technical feasibility.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Technical Service Specification Standard -->
-        <section class="py-20 bg-gray-50 border-t border-gray-200">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold font-heading text-utp-charcoal mb-8 text-center">Technical Service Standard</h2>
-                
-                <div class="bg-white border border-gray-200 shadow-sm rounded-sm overflow-hidden max-w-4xl mx-auto">
-                    <table class="w-full text-left border-collapse">
-                        <tbody>
-                            <tr class="border-b border-gray-200">
-                                <th class="py-4 px-6 bg-gray-50 text-gray-900 font-semibold w-1/3">Fabric Suitability</th>
-                                <td class="py-4 px-6 text-gray-700">100% Cotton woven fabrics, blends, and specialized home textile constructions.</td>
-                            </tr>
-                            <tr class="border-b border-gray-200">
-                                <th class="py-4 px-6 bg-gray-50 text-gray-900 font-semibold">GSM Range</th>
-                                <td class="py-4 px-6 text-gray-700">Typically handling standard export weights (specific GSM requirements assessed upon enquiry).</td>
-                            </tr>
-                            <tr class="border-b border-gray-200">
-                                <th class="py-4 px-6 bg-gray-50 text-gray-900 font-semibold">Output Quality</th>
-                                <td class="py-4 px-6 text-gray-700">Export-grade fastness, verified shade matching, and controlled shrinkage parameters.</td>
-                            </tr>
-                            <tr>
-                                <th class="py-4 px-6 bg-gray-50 text-gray-900 font-semibold">Minimum Order Quantity</th>
-                                <td class="py-4 px-6 text-gray-700">Evaluated per requirement to ensure economic viability and technical feasibility.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION: Final CTA -->
+        <!-- Final CTA -->
         <section class="py-24 bg-utp-green text-white text-center">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6">Discuss Your Requirement</h2>
                 <p class="text-lg text-gray-200 mb-10 max-w-2xl mx-auto">Submit your fabric specifications for a detailed technical assessment and processing quotation.</p>
-                <a href="/contact.html" class="btn btn-primary text-lg px-8 py-3">Request a Quote</a>
+                <a href="/contact.html" class="btn btn-primary text-lg px-8 py-3 bg-utp-gold text-white hover:bg-white hover:text-utp-gold shadow-lg">Request a Quote</a>
             </div>
         </section>
     </main>
     
     <utp-footer></utp-footer>
 
-    <script src="assets/js/components.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script>
+        // Scrollspy logic for side navigation
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.scroll-mt-28');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current) && current !== '') {
+                        link.classList.add('active');
+                    }
+                });
+            });
+            
+            // Set first item active initially if at top
+            if(window.pageYOffset < 100) {
+                navLinks[0].classList.add('active');
+            }
+        });
+    </script>
 </body>
 </html>

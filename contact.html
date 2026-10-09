@@ -1,174 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Udhayaa Textile Processing</title>
     <meta name="description" content="Request a quote or submit an enquiry to Udhayaa Textile Processing.">
-    <meta property="og:title" content="Contact Us | Udhayaa Textile Processing">
-    <meta property="og:description" content="Request a quote or submit an enquiry to Udhayaa Textile Processing.">
-    <meta property="og:type" content="website">
-        <link rel="icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
+    <link rel="icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/js/tailwind-config.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    
+    <style>
+        /* Modern form reset for floating labels */
+        .peer:focus ~ label, .peer:not(:placeholder-shown) ~ label {
+            transform: scale(0.85) translateY(-2rem);
+            color: #1c523c; /* utp-green */
+        }
+        
+        /* Interactive Link Hover */
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+        }
+        .hover-underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #cca352; /* utp-gold */
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        .hover-underline-animation:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    </style>
 </head>
-<body class="antialiased">
+<body class="antialiased bg-gray-50 flex flex-col min-h-screen">
     
     <utp-header></utp-header>
 
-    <!-- MAIN CONTENT -->
-    <main id="main-content">
-        <section class="bg-gray-50 py-16 border-b border-gray-200">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold font-heading text-utp-charcoal mb-4">Discuss Your Fabric Requirement</h1>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Looking for a reliable textile processing supplier? Share your specifications for a technical assessment and quotation.</p>
+    <main id="main-content" class="flex-grow">
+        <!-- Glassmorphism Portal Container -->
+        <section class="relative bg-utp-charcoal pt-24 pb-32 lg:pt-32 lg:pb-48 bg-fixed bg-[url('assets/images/facility/facility_interior.jpg')] bg-cover bg-center min-h-[500px]">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80 mix-blend-multiply"></div>
+            
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center reveal-item reveal-visible">
+                <p class="text-sm font-bold text-utp-gold tracking-widest uppercase mb-4 drop-shadow-md">CONNECT WITH US</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 text-white drop-shadow-lg">Discuss Your Fabric Requirement</h1>
+                <p class="text-lg md:text-xl text-gray-200 font-medium max-w-3xl mx-auto drop-shadow-md">Looking for a reliable textile processing supplier? Share your specifications for a technical assessment and accurate quotation.</p>
             </div>
         </section>
 
-        <section class="py-20 bg-white">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                    <!-- Contact Details -->
-                    <div class="lg:col-span-1 space-y-8">
-                        <div>
-                            <h2 class="text-2xl font-bold font-heading text-utp-charcoal mb-6">Contact Information</h2>
-                            <p class="text-gray-600 mb-8">Reach out to us directly or fill out the request form to discuss your processing needs.</p>
+        <section class="relative z-20 -mt-24 lg:-mt-32 pb-24 mx-4 sm:mx-6 lg:mx-auto max-w-[1280px]">
+            <div class="bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/40 overflow-hidden reveal-item">
+                <div class="grid grid-cols-1 lg:grid-cols-5">
+                    
+                    <!-- Left: Contact Details (Glass Panel) -->
+                    <div class="lg:col-span-2 bg-utp-green text-white p-10 md:p-14 relative overflow-hidden flex flex-col justify-between">
+                        <!-- Abstract Background Pattern -->
+                        <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-utp-gold/10 rounded-full blur-3xl"></div>
+                        <div class="absolute -top-12 -left-12 w-48 h-48 bg-white/5 rounded-full blur-2xl"></div>
+                        
+                        <div class="relative z-10">
+                            <h2 class="text-3xl font-bold font-heading mb-8">Contact Information</h2>
+                            <p class="text-green-50 mb-12 text-lg">Reach out to us directly or fill out the request form to discuss your processing needs. Our technical team is ready to assist.</p>
                             
-                            <div class="space-y-6">
-                                <div class="flex items-start">
-                                    <div class="w-12 h-12 bg-utp-green/10 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
-                                        <svg class="h-6 w-6 text-utp-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            <div class="space-y-8">
+                                <!-- Location -->
+                                <div class="flex items-start group">
+                                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0 mr-6 group-hover:bg-utp-gold transition-colors duration-300">
+                                        <svg class="h-6 w-6 text-white group-hover:text-utp-charcoal transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                                     </div>
                                     <div>
-                                        <h3 class="font-bold text-gray-900 mb-1">Factory Location</h3>
-                                        <p class="text-gray-600">63/A Senthur Nagar<br>Ellapalayam Road Periyasemur<br>Erode-638004</p>
+                                        <h3 class="font-bold text-utp-gold mb-1">Factory Location</h3>
+                                        <p class="text-white/90 leading-relaxed">63/A Senthur Nagar<br>Ellapalayam Road Periyasemur<br>Erode-638004, Tamil Nadu</p>
                                     </div>
                                 </div>
                                 
-                                <div class="flex items-start">
-                                    <div class="w-12 h-12 bg-utp-green/10 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
-                                        <svg class="h-6 w-6 text-utp-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                                <!-- Phone -->
+                                <div class="flex items-start group">
+                                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0 mr-6 group-hover:bg-utp-gold transition-colors duration-300">
+                                        <svg class="h-6 w-6 text-white group-hover:text-utp-charcoal transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                                     </div>
                                     <div>
-                                        <h3 class="font-bold text-gray-900 mb-1">Phone & WhatsApp</h3>
-                                        <a href="tel:+919842756455" class="block text-utp-green hover:underline">+91 9842756455</a>
-                                        <a href="tel:+919566866686" class="block text-utp-green hover:underline mt-1">+91 95668 66686</a>
+                                        <h3 class="font-bold text-utp-gold mb-1">Phone & WhatsApp</h3>
+                                        <a href="tel:+919842756455" class="block text-white hover-underline-animation mb-1 text-lg">+91 98427 56455</a>
+                                        <a href="tel:+919566866686" class="block text-white hover-underline-animation text-lg">+91 95668 66686</a>
                                     </div>
                                 </div>
                                 
-                                <div class="flex items-start">
-                                    <div class="w-12 h-12 bg-utp-green/10 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
-                                        <svg class="h-6 w-6 text-utp-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                                <!-- Email -->
+                                <div class="flex items-start group">
+                                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0 mr-6 group-hover:bg-utp-gold transition-colors duration-300">
+                                        <svg class="h-6 w-6 text-white group-hover:text-utp-charcoal transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                                     </div>
                                     <div>
-                                        <h3 class="font-bold text-gray-900 mb-1">Email</h3>
-                                        <a href="mailto:udhayatexstyles@gmail.com" class="text-utp-green hover:underline">udhayatexstyles@gmail.com</a>
+                                        <h3 class="font-bold text-utp-gold mb-1">Email Inquiry</h3>
+                                        <a href="mailto:udhayatexstyles@gmail.com" class="text-white hover-underline-animation break-all">udhayatexstyles@gmail.com</a>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <!-- Social/Extra Icons (Optional) -->
+                        <div class="relative z-10 mt-16 pt-8 border-t border-white/20">
+                            <p class="text-xs text-white/60 uppercase tracking-widest font-bold">Operating Hours</p>
+                            <p class="text-sm text-white/90 mt-2">Monday - Saturday: 8:00 AM - 6:00 PM</p>
                         </div>
                     </div>
                     
-                    <!-- RFQ Form -->
-                    <div class="lg:col-span-2">
-                        <div class="bg-white rounded-sm border border-gray-200 shadow-sm p-6 md:p-8 relative">
-                            <div id="form-success-message" class="hidden absolute inset-0 bg-white z-10 flex flex-col items-center justify-center text-center p-8">
-                                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6">
-                                    <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                    <!-- Right: RFQ Form with Floating Labels -->
+                    <div class="lg:col-span-3 p-10 md:p-14 bg-white/70">
+                        <h2 class="text-3xl font-bold font-heading text-utp-charcoal mb-2">Request a Quote</h2>
+                        <p class="text-gray-600 mb-10 text-sm">Share your fabric specifications and required processing below.</p>
+                        
+                        <form id="rfq-form" action="mailto:udhayatexstyles@gmail.com" method="GET" enctype="text/plain" class="space-y-8">
+                            
+                            <!-- Name & Company -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div class="relative z-0 w-full group">
+                                    <input type="text" name="Name" id="name" class="block py-3 px-0 w-full text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-utp-green peer" placeholder=" " required />
+                                    <label for="name" class="absolute text-base text-gray-500 duration-300 transform -translate-y-6 scale-85 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-utp-green peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-85 peer-focus:-translate-y-6">Full Name <span class="text-red-500">*</span></label>
                                 </div>
-                                <h3 class="text-2xl font-bold font-heading text-utp-charcoal mb-2">Request Received</h3>
-                                <p class="text-gray-600 mb-6">Thank you. We have received your fabric requirement and will contact you shortly to discuss specifications and pricing.</p>
-                                <div class="flex gap-4">
-                                    <a href="https://wa.me/919842756455" class="btn btn-secondary flex items-center" target="_blank" rel="noopener noreferrer">
-                                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                                        Chat on WhatsApp
-                                    </a>
-                                    <button type="button" class="btn btn-primary" onclick="document.getElementById('form-success-message').classList.add('hidden'); document.getElementById('rfq-form').reset();">Submit Another</button>
+                                <div class="relative z-0 w-full group">
+                                    <input type="text" name="Company" id="company" class="block py-3 px-0 w-full text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-utp-green peer" placeholder=" " required />
+                                    <label for="company" class="absolute text-base text-gray-500 duration-300 transform -translate-y-6 scale-85 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-utp-green peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-85 peer-focus:-translate-y-6">Company Name <span class="text-red-500">*</span></label>
                                 </div>
                             </div>
-
-                            <h2 class="text-2xl font-bold font-heading text-utp-charcoal mb-2">Request a Quote</h2>
-                            <p class="text-gray-600 mb-8 text-sm">Share your fabric specifications, required processing, order quantity, and target delivery date.</p>
                             
-                            <form id="rfq-form" action="mailto:udhayatexstyles@gmail.com" method="GET" enctype="text/plain">
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                                    <div class="form-group mb-0">
-                                        <label for="name" class="form-label">Full Name <span class="text-red-500">*</span></label>
-                                        <input type="text" id="name" name="Name" class="form-input" required>
-                                    </div>
-                                    <div class="form-group mb-0">
-                                        <label for="company" class="form-label">Company Name <span class="text-red-500">*</span></label>
-                                        <input type="text" id="company" name="Company" class="form-input" required>
-                                    </div>
+                            <!-- Email & Phone -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div class="relative z-0 w-full group">
+                                    <input type="email" name="Email" id="email" class="block py-3 px-0 w-full text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-utp-green peer" placeholder=" " required />
+                                    <label for="email" class="absolute text-base text-gray-500 duration-300 transform -translate-y-6 scale-85 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-utp-green peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-85 peer-focus:-translate-y-6">Email Address <span class="text-red-500">*</span></label>
                                 </div>
-                                
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                                    <div class="form-group mb-0">
-                                        <label for="email" class="form-label">Email Address <span class="text-red-500">*</span></label>
-                                        <input type="email" id="email" name="Email" class="form-input" required>
-                                    </div>
-                                    <div class="form-group mb-0">
-                                        <label for="phone" class="form-label">Phone Number <span class="text-gray-400 font-normal text-sm">(Recommended)</span></label>
-                                        <input type="tel" id="phone" name="Phone" class="form-input">
-                                    </div>
+                                <div class="relative z-0 w-full group">
+                                    <input type="tel" name="Phone" id="phone" class="block py-3 px-0 w-full text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-utp-green peer" placeholder=" " />
+                                    <label for="phone" class="absolute text-base text-gray-500 duration-300 transform -translate-y-6 scale-85 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-utp-green peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-85 peer-focus:-translate-y-6">Phone Number</label>
                                 </div>
+                            </div>
+                            
+                            <div class="border-t border-gray-200 mt-10 pt-10">
+                                <h3 class="text-xl font-bold text-utp-charcoal mb-8">Requirement Details</h3>
                                 
-                                <div class="border-t border-gray-100 my-8 pt-8">
-                                    <h3 class="text-lg font-bold text-utp-charcoal mb-6">Requirement Details</h3>
-                                    
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                                        <div class="form-group mb-0">
-                                            <label for="service" class="form-label">Service Required <span class="text-red-500">*</span></label>
-                                            <select id="service" name="Service Required" class="form-input" required>
-                                                <option value="" disabled selected>Select a service...</option>
-                                                <option value="Solid-Dyed Fabrics">Solid-Dyed Fabrics</option>
-                                                <option value="Printed Fabrics">Printed Fabrics</option>
-                                                <option value="Finished Fabric Processing">Finished Fabric Processing</option>
-                                                <option value="Other">Other (Please specify below)</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group mb-0">
-                                            <label for="quantity" class="form-label">Estimated Quantity <span class="text-gray-400 font-normal text-sm">(Recommended)</span></label>
-                                            <input type="text" id="quantity" name="Quantity" class="form-input" placeholder="e.g. 5,000 meters">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                                    <!-- Service Select (Floating doesn't work perfectly on select without custom wrappers, so standard style) -->
+                                    <div class="relative z-0 w-full group">
+                                        <select name="Service" id="service" class="block py-3 px-0 w-full text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-utp-green peer" required>
+                                            <option value="" disabled selected>Select a Service</option>
+                                            <option value="Solid-Dyed Fabrics">Solid-Dyed Fabrics</option>
+                                            <option value="Printed Fabrics">Printed Fabrics</option>
+                                            <option value="Finished Processing">Finished Processing</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <label for="service" class="absolute text-base text-utp-green duration-300 transform -translate-y-6 scale-85 top-3 -z-10 origin-[0]">Service Required *</label>
+                                        <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                         </div>
                                     </div>
                                     
-                                    <div class="form-group mb-6">
-                                        <label for="specs" class="form-label">Fabric Specifications & Details <span class="text-gray-400 font-normal text-sm">(Recommended)</span></label>
-                                        <textarea id="specs" name="Fabric Specs" rows="4" class="form-input" placeholder="Please provide fabric composition, weave, weight (GSM), and any specific processing requirements..."></textarea>
-                                    </div>
-                                    
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                                        <div class="form-group mb-0">
-                                            <label for="date" class="form-label">Target Delivery Date <span class="text-gray-400 font-normal text-sm">(Recommended)</span></label>
-                                            <input type="date" id="date" name="Target Date" class="form-input">
-                                        </div>
-                                        <div class="form-group mb-0">
-                                            <label for="business-type" class="form-label">Business Type <span class="text-gray-400 font-normal text-sm">(Optional)</span></label>
-                                            <select id="business-type" name="Business Type" class="form-input">
-                                                <option value="">Select...</option>
-                                                <option value="Exporter">Exporter</option>
-                                                <option value="Manufacturer">Manufacturer</option>
-                                                <option value="Buying House">Buying House</option>
-                                                <option value="Other">Other</option>
-                                            </select>
-                                        </div>
+                                    <div class="relative z-0 w-full group">
+                                        <input type="text" name="Quantity" id="quantity" class="block py-3 px-0 w-full text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-utp-green peer" placeholder=" " />
+                                        <label for="quantity" class="absolute text-base text-gray-500 duration-300 transform -translate-y-6 scale-85 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-utp-green peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-85 peer-focus:-translate-y-6">Estimated Quantity (e.g., 5,000 meters)</label>
                                     </div>
                                 </div>
                                 
-                                <div id="form-error-message" class="hidden text-red-600 text-sm mb-4 bg-red-50 p-3 rounded border border-red-100">
-                                    Please complete all required fields to help us accurately assess your requirement.
+                                <div class="relative z-0 w-full group mb-8">
+                                    <textarea name="Specs" id="specs" rows="4" class="block py-3 px-0 w-full text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-utp-green peer" placeholder=" "></textarea>
+                                    <label for="specs" class="absolute text-base text-gray-500 duration-300 transform -translate-y-6 scale-85 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-utp-green peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-85 peer-focus:-translate-y-6">Fabric Specifications (Composition, GSM, Weave...)</label>
                                 </div>
                                 
-                                <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-                                    <button type="submit" class="btn btn-primary w-full sm:w-auto">Submit Enquiry</button>
-                                    <p class="text-xs text-gray-500 text-center sm:text-right">Your information is secure and will only be used for quotation purposes.</p>
+                                <div class="relative z-0 w-full group mb-10">
+                                    <input type="date" name="Target Date" id="date" class="block py-3 px-0 w-full text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-utp-green peer" />
+                                    <label for="date" class="absolute text-base text-utp-green duration-300 transform -translate-y-6 scale-85 top-3 -z-10 origin-[0]">Target Delivery Date</label>
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+                            
+                            <button type="submit" class="w-full btn btn-primary text-lg py-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-utp-charcoal text-white hover:bg-utp-green">Send Request for Quote</button>
+                            
+                            <p class="text-xs text-center text-gray-400 mt-4">By submitting this form, you agree to our <a href="/privacy-policy.html" class="underline hover:text-utp-green">Privacy Policy</a>.</p>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -177,8 +195,14 @@
     
     <utp-footer></utp-footer>
 
-    <script src="assets/js/components.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/forms.js"></script>
+    <script>
+        // Intercept form submission to show a nice alert (since it's a mailto link which feels abrupt)
+        document.getElementById('rfq-form').addEventListener('submit', function(e) {
+            // Let the mailto link fire, but also show an alert that the email client is opening
+            setTimeout(() => {
+                alert("Your default email client is opening to send the request. If it didn't open, please email us directly at udhayatexstyles@gmail.com");
+            }, 500);
+        });
+    </script>
 </body>
 </html>

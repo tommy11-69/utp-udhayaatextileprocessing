@@ -1,102 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Udhayaa Textile Processing</title>
     <meta name="description" content="Learn about Udhayaa Textile Processing and our 30+ years of experience in the textile industry.">
-    <meta property="og:title" content="About Us | Udhayaa Textile Processing">
-    <meta property="og:description" content="Learn about Udhayaa Textile Processing and our 30+ years of experience in the textile industry.">
-    <meta property="og:type" content="website">
-        <link rel="icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
+    <link rel="icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/js/tailwind-config.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    
+    <style>
+        /* Timeline styling */
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            background: #e5e7eb;
+            top: 0;
+            bottom: 0;
+            z-index: 0;
+        }
+        .timeline-line-glow {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            background: linear-gradient(to bottom, #1c523c, #cca352, transparent);
+            top: 0;
+            height: 0%;
+            z-index: 1;
+            transition: height 1s ease-out;
+        }
+        @media (max-width: 768px) {
+            .timeline-line, .timeline-line-glow {
+                left: 24px;
+                transform: none;
+            }
+        }
+    </style>
 </head>
-<body class="antialiased">
+<body class="antialiased bg-gray-50">
     
     <utp-header></utp-header>
 
-    <!-- MAIN CONTENT -->
     <main id="main-content">
-        <section class="bg-gray-50 py-16 border-b border-gray-200">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold font-heading text-utp-charcoal mb-4">Built on Experience.<br>Focused on Fabric Quality.</h1>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Serving the woven textile industry with dependable processing and clear communication.</p>
+        <!-- Parallax Hero -->
+        <section class="bg-utp-charcoal text-white py-20 lg:py-32 relative overflow-hidden bg-fixed bg-[url('assets/images/facility/facility_interior.jpg')] bg-cover bg-center">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-utp-green/50 mix-blend-multiply"></div>
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 md:p-12 rounded-2xl shadow-2xl max-w-4xl w-full reveal-item reveal-visible">
+                    <p class="text-sm font-bold text-utp-gold tracking-widest uppercase mb-4 drop-shadow-md">COMPANY PROFILE</p>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 text-white drop-shadow-lg">Built on Experience.<br>Focused on Fabric.</h1>
+                    <p class="text-lg md:text-xl text-gray-100 font-medium mb-8 max-w-3xl mx-auto drop-shadow-md">Serving the woven textile industry with dependable processing, clear communication, and strict adherence to global standards for over three decades.</p>
+                </div>
             </div>
         </section>
 
-        <section class="py-20 bg-white">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-                    <div>
-                        <h2 class="text-3xl font-bold font-heading text-utp-charcoal mb-6">Decades of Textile Industry Experience</h2>
-                        <p class="text-gray-600 mb-4 text-lg">For over 30 years, Udhayaa Textile Processing has been a dependable partner in the textile supply chain, specializing in the processing of woven fabrics for the export market.</p>
-                        <p class="text-gray-600">Based in Erode, Tamil Nadu, we understand that consistency, timely delivery, and exact shade matching are critical to your success as a manufacturer or exporter. We do not just process fabric; we manage the technical complexities so you can focus on your core business.</p>
+        <!-- Number Counters Section -->
+        <section class="py-16 bg-white relative z-20 -mt-10 mx-4 sm:mx-6 lg:mx-8 rounded-2xl shadow-xl border border-gray-100 max-w-[1280px] xl:mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                <div class="p-4 counter-box">
+                    <div class="text-5xl font-black text-utp-green mb-2 flex items-center justify-center">
+                        <span class="counter" data-target="30">0</span><span class="text-utp-gold">+</span>
                     </div>
-                    <div class="aspect-[4/3] bg-gray-200 rounded-sm overflow-hidden relative border border-gray-100">
-                        <img src="assets/images/facility/facility_interior.jpg" alt="Textile Facility Interior" class="w-full h-full object-cover">
+                    <p class="text-gray-500 font-bold uppercase tracking-widest text-sm">Years Experience</p>
+                </div>
+                <div class="p-4 counter-box pt-8 md:pt-4">
+                    <div class="text-5xl font-black text-utp-green mb-2 flex items-center justify-center">
+                        <span class="counter" data-target="10">0</span><span class="text-utp-gold">M+</span>
                     </div>
+                    <p class="text-gray-500 font-bold uppercase tracking-widest text-sm">Meters Processed Annually</p>
+                </div>
+                <div class="p-4 counter-box pt-8 md:pt-4">
+                    <div class="text-5xl font-black text-utp-green mb-2 flex items-center justify-center">
+                        <span class="counter" data-target="100">0</span><span class="text-utp-gold">%</span>
+                    </div>
+                    <p class="text-gray-500 font-bold uppercase tracking-widest text-sm">Export Quality Assured</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Heritage Timeline -->
+        <section class="py-24 bg-gray-50">
+            <div class="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20 reveal-item">
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading text-utp-charcoal mb-4">Our Journey</h2>
+                    <p class="text-gray-600 text-lg max-w-2xl mx-auto">From our foundation to becoming a premier export-grade processing partner, our growth has been driven by technical innovation and client trust.</p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-24">
-                    <div class="card p-8">
-                        <div class="w-12 h-12 bg-utp-green/10 rounded-full flex items-center justify-center mb-6">
-                            <svg class="h-6 w-6 text-utp-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                <div class="relative pb-12" id="timeline-container">
+                    <div class="timeline-line hidden md:block"></div>
+                    <div class="timeline-line-glow hidden md:block" id="timeline-fill"></div>
+
+                    <!-- Timeline Mobile Lines -->
+                    <div class="absolute left-[23px] top-0 bottom-0 w-[2px] bg-gray-200 md:hidden z-0"></div>
+                    <div class="absolute left-[23px] top-0 w-[2px] bg-gradient-to-b from-utp-green to-utp-gold md:hidden z-10 transition-all duration-1000" id="timeline-fill-mobile" style="height: 0%;"></div>
+
+                    <!-- Step 1 -->
+                    <div class="relative z-20 flex flex-col md:flex-row items-center mb-16 timeline-step group reveal-item">
+                        <div class="md:w-1/2 md:pr-16 md:text-right pl-16 md:pl-0 w-full mb-4 md:mb-0">
+                            <h3 class="text-2xl font-bold text-utp-charcoal mb-2 group-hover:text-utp-green transition-colors">Foundation</h3>
+                            <p class="text-gray-600 text-sm">Established in Erode, Tamil Nadu. Began operations with a core focus on fundamental woven fabric processing, building a reputation for reliability in the domestic market.</p>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-gray-200 group-hover:border-utp-green transition-colors flex items-center justify-center font-bold text-gray-400 group-hover:text-utp-green shadow-lg z-20 timeline-dot">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                        </div>
+                        <div class="md:w-1/2 md:pl-16 pl-16 md:pl-16 w-full text-left">
+                            <span class="text-utp-gold font-bold text-xl opacity-80 group-hover:opacity-100 transition-opacity">1990s</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative z-20 flex flex-col md:flex-row-reverse items-center mb-16 timeline-step group reveal-item">
+                        <div class="md:w-1/2 md:pl-16 text-left pl-16 w-full mb-4 md:mb-0">
+                            <h3 class="text-2xl font-bold text-utp-charcoal mb-2 group-hover:text-utp-green transition-colors">Expansion of Capacity</h3>
+                            <p class="text-gray-600 text-sm">Scaled operations and integrated advanced continuous dyeing ranges. Began handling high-volume requirements for larger institutional suppliers and exporters.</p>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-gray-200 group-hover:border-utp-green transition-colors flex items-center justify-center font-bold text-gray-400 group-hover:text-utp-green shadow-lg z-20 timeline-dot">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                        </div>
+                        <div class="md:w-1/2 md:pr-16 pl-16 md:pl-0 md:text-right w-full">
+                            <span class="text-utp-gold font-bold text-xl opacity-80 group-hover:opacity-100 transition-opacity">2005</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative z-20 flex flex-col md:flex-row items-center mb-16 timeline-step group reveal-item">
+                        <div class="md:w-1/2 md:pr-16 md:text-right pl-16 md:pl-0 w-full mb-4 md:mb-0">
+                            <h3 class="text-2xl font-bold text-utp-charcoal mb-2 group-hover:text-utp-green transition-colors">Technological Integration</h3>
+                            <p class="text-gray-600 text-sm">Invested in advanced finishing machinery and aligned processes with global compliance standards (OEKO-TEX, GOTS). Established the dedicated in-house quality lab.</p>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-gray-200 group-hover:border-utp-green transition-colors flex items-center justify-center font-bold text-gray-400 group-hover:text-utp-green shadow-lg z-20 timeline-dot">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+                        </div>
+                        <div class="md:w-1/2 md:pl-16 pl-16 md:pl-16 w-full text-left">
+                            <span class="text-utp-gold font-bold text-xl opacity-80 group-hover:opacity-100 transition-opacity">2015</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative z-20 flex flex-col md:flex-row-reverse items-center timeline-step group reveal-item">
+                        <div class="md:w-1/2 md:pl-16 text-left pl-16 w-full mb-4 md:mb-0">
+                            <h3 class="text-2xl font-bold text-utp-charcoal mb-2 group-hover:text-utp-green transition-colors">A Trusted Export Partner</h3>
+                            <p class="text-gray-600 text-sm">Today, Udhayaa is a premier processing partner handling specialized coatings, wide-width home textiles, and complex printed routes for a global client base.</p>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-12 h-12 rounded-full bg-utp-green border-4 border-utp-green flex items-center justify-center font-bold text-white shadow-lg z-20 timeline-dot">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <div class="md:w-1/2 md:pr-16 pl-16 md:pl-0 md:text-right w-full">
+                            <span class="text-utp-green font-bold text-xl opacity-100">Present</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Principles -->
+        <section class="py-24 bg-white">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-utp-green transition-colors group reveal-item">
+                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                            <svg class="h-7 w-7 text-utp-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
                         </div>
                         <h3 class="text-xl font-bold font-heading text-utp-charcoal mb-4">What We Do</h3>
-                        <p class="text-gray-600 text-sm">We provide comprehensive greige-to-finished processing services, including high-quality solid dyeing and precision printing. We handle diverse woven fabrics intended for bed linens, bags, and home furnishings.</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">We provide comprehensive greige-to-finished processing services, including high-quality solid dyeing, precision printing, and specialized coatings. We handle diverse woven fabrics intended for bed linens, bags, and home furnishings.</p>
                     </div>
                     
-                    <div class="card p-8">
-                        <div class="w-12 h-12 bg-utp-green/10 rounded-full flex items-center justify-center mb-6">
-                            <svg class="h-6 w-6 text-utp-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-utp-green transition-colors group reveal-item" style="transition-delay: 100ms;">
+                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                            <svg class="h-7 w-7 text-utp-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                         </div>
                         <h3 class="text-xl font-bold font-heading text-utp-charcoal mb-4">Our Approach</h3>
-                        <p class="text-gray-600 text-sm">We believe in structured data and clear communication. Every order begins with a rigorous technical assessment and sampling phase, ensuring that what we promise is exactly what we deliver.</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">We believe in structured data and clear communication. Every order begins with a rigorous technical assessment and sampling phase, ensuring that what we promise is exactly what we deliver, every single time.</p>
                     </div>
                     
-                    <div class="card p-8">
-                        <div class="w-12 h-12 bg-utp-green/10 rounded-full flex items-center justify-center mb-6">
-                            <svg class="h-6 w-6 text-utp-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-utp-green transition-colors group reveal-item" style="transition-delay: 200ms;">
+                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                            <svg class="h-7 w-7 text-utp-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                         </div>
                         <h3 class="text-xl font-bold font-heading text-utp-charcoal mb-4">Our Commitment</h3>
-                        <p class="text-gray-600 text-sm">We are committed to realistic lead times based on our actual capacity. We will not overcommit, ensuring that your production schedule remains intact and your end-buyers remain satisfied.</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">We are committed to realistic lead times based on our actual capacity. We will not overcommit, ensuring that your production schedule remains intact and your end-buyers remain satisfied.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- SECTION: Compliance -->
-        <section class="py-20 bg-gray-50 border-t border-b border-gray-200">
+        <section class="py-24 bg-gray-50 border-t border-b border-gray-200">
             <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16 max-w-3xl mx-auto">
+                <div class="text-center mb-16 max-w-3xl mx-auto reveal-item">
                     <h2 class="text-3xl font-bold font-heading text-utp-charcoal mb-4">Global Standards & Compliance</h2>
-                    <p class="text-gray-600 text-lg">Quality isn't claimed—it is independently verified. Every fabric we process is backed by internationally recognized quality, environmental, and compliance standards.</p>
+                    <p class="text-gray-600 text-lg">Quality isn't claimed—it is independently verified. Every fabric we process is backed by internationally recognized standards.</p>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-white p-6 rounded border border-gray-200 shadow-sm text-center card group hover:border-utp-green transition-colors">
-                        <h3 class="font-bold text-lg text-utp-green mb-2">OEKO-TEX® 100</h3>
-                        <p class="text-sm text-gray-600">Textiles tested for harmful substances, ensuring safety for human ecology.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm text-center hover:-translate-y-2 hover:shadow-lg transition-all duration-300 reveal-item">
+                        <h3 class="font-bold text-lg text-utp-green mb-2">OEKO-TEX®</h3>
+                        <p class="text-xs text-gray-500">Standard 100 tested for harmful substances.</p>
                     </div>
-                    <div class="bg-white p-6 rounded border border-gray-200 shadow-sm text-center card group hover:border-utp-green transition-colors">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm text-center hover:-translate-y-2 hover:shadow-lg transition-all duration-300 reveal-item" style="transition-delay: 50ms;">
                         <h3 class="font-bold text-lg text-utp-green mb-2">GOTS & OCS</h3>
-                        <p class="text-sm text-gray-600">Global Organic Textile Standard and Organic Content Standard verified processing.</p>
+                        <p class="text-xs text-gray-500">Organic Standard verified processing.</p>
                     </div>
-                    <div class="bg-white p-6 rounded border border-gray-200 shadow-sm text-center card group hover:border-utp-green transition-colors">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm text-center hover:-translate-y-2 hover:shadow-lg transition-all duration-300 reveal-item" style="transition-delay: 100ms;">
                         <h3 class="font-bold text-lg text-utp-green mb-2">ZDHC Verified</h3>
-                        <p class="text-sm text-gray-600">Supplier to Zero and Wastewater Performance verified for responsible chemical management.</p>
+                        <p class="text-xs text-gray-500">Responsible chemical management.</p>
                     </div>
-                    <div class="bg-white p-6 rounded border border-gray-200 shadow-sm text-center card group hover:border-utp-green transition-colors">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm text-center hover:-translate-y-2 hover:shadow-lg transition-all duration-300 reveal-item" style="transition-delay: 150ms;">
                         <h3 class="font-bold text-lg text-utp-green mb-2">GRS & FSC</h3>
-                        <p class="text-sm text-gray-600">Global Recycled Standard and FSC Chain of Custody for sustainable sourcing.</p>
+                        <p class="text-xs text-gray-500">Recycled Standard & Chain of Custody.</p>
                     </div>
-                    <div class="bg-white p-6 rounded border border-gray-200 shadow-sm text-center sm:col-span-2 lg:col-span-4 lg:w-1/2 lg:mx-auto card group hover:border-utp-green transition-colors">
-                        <h3 class="font-bold text-lg text-utp-green mb-2">Casca Higg FEM & FSLM</h3>
-                        <p class="text-sm text-gray-600">Independent environmental performance, social, and labour management assessment.</p>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm text-center hover:-translate-y-2 hover:shadow-lg transition-all duration-300 reveal-item" style="transition-delay: 200ms;">
+                        <h3 class="font-bold text-lg text-utp-green mb-2">Casca Higg</h3>
+                        <p class="text-xs text-gray-500">FEM & FSLM verified assessments.</p>
                     </div>
                 </div>
             </div>
@@ -107,14 +229,95 @@
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6">Ready to Partner With Us?</h2>
                 <p class="text-lg text-gray-200 mb-10 max-w-2xl mx-auto">Experience the reliability of a processing partner with over three decades in the industry.</p>
-                <a href="/contact.html" class="btn btn-primary text-lg px-8 py-3">Request a Quote</a>
+                <a href="/contact.html" class="btn btn-primary text-lg px-8 py-3 bg-utp-gold text-white hover:bg-white hover:text-utp-gold shadow-lg">Request a Quote</a>
             </div>
         </section>
     </main>
     
     <utp-footer></utp-footer>
 
-    <script src="assets/js/components.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script>
+        // Number Counter Logic
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // lower is faster
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 15);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        // Trigger counter animation on scroll
+        let counterAnimated = false;
+        window.addEventListener('scroll', () => {
+            if (counterAnimated) return;
+            const counterSection = document.querySelector('.counter-box');
+            if(counterSection) {
+                const rect = counterSection.getBoundingClientRect();
+                if(rect.top < window.innerHeight) {
+                    animateCounters();
+                    counterAnimated = true;
+                }
+            }
+        });
+
+        // Timeline Scroll Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('timeline-container');
+            const fillDesktop = document.getElementById('timeline-fill');
+            const fillMobile = document.getElementById('timeline-fill-mobile');
+            const dots = document.querySelectorAll('.timeline-dot');
+            
+            if(!container) return;
+
+            function updateTimeline() {
+                const rect = container.getBoundingClientRect();
+                const viewportHeight = window.innerHeight;
+                
+                if (rect.top > viewportHeight / 1.5) {
+                    if(fillDesktop) fillDesktop.style.height = '0%';
+                    if(fillMobile) fillMobile.style.height = '0%';
+                    dots.forEach(d => {
+                        d.classList.remove('border-utp-green', 'text-utp-green');
+                        if(!d.classList.contains('bg-utp-green')) {
+                            d.classList.add('border-gray-200', 'text-gray-400');
+                        }
+                    });
+                    return;
+                }
+                
+                const scrollDistance = (viewportHeight / 1.5) - rect.top;
+                const maxDistance = rect.height;
+                let percentage = (scrollDistance / maxDistance) * 100;
+                percentage = Math.max(0, Math.min(100, percentage));
+                
+                if(fillDesktop) fillDesktop.style.height = percentage + '%';
+                if(fillMobile) fillMobile.style.height = percentage + '%';
+
+                dots.forEach((dot, index) => {
+                    if (percentage > (index * 30)) {
+                        dot.classList.add('border-utp-green', 'text-utp-green');
+                        dot.classList.remove('border-gray-200', 'text-gray-400');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', updateTimeline);
+            window.addEventListener('resize', updateTimeline);
+            setTimeout(updateTimeline, 100);
+        });
+    </script>
 </body>
 </html>

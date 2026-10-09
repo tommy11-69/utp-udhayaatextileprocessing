@@ -1,74 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Applications | Udhayaa Textile Processing</title>
     <meta name="description" content="Discover the woven textile applications of our processing capabilities.">
-    <meta property="og:title" content="Applications | Udhayaa Textile Processing">
-    <meta property="og:description" content="Discover the woven textile applications of our processing capabilities.">
-    <meta property="og:type" content="website">
-        <link rel="icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
+    <link rel="icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/js/tailwind-config.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <style>
+        /* Smooth image zoom on hover */
+        .img-zoom { transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); }
+        .group:hover .img-zoom { transform: scale(1.08); }
+        
+        /* Slide up overlay */
+        .overlay-slide {
+            transform: translateY(100%);
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .group:hover .overlay-slide { transform: translateY(0); }
+    </style>
 </head>
-<body class="antialiased">
+<body class="antialiased bg-gray-50">
     
     <utp-header></utp-header>
 
-    <!-- MAIN CONTENT -->
     <main id="main-content">
-        <section class="bg-gray-50 py-16 border-b border-gray-200">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold font-heading text-utp-charcoal mb-4">Woven Textile Applications</h1>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Specialized processing for fabrics intended for home textiles and export merchandise.</p>
+        <!-- Glassmorphism Hero with Parallax bg-fixed -->
+        <section class="bg-utp-charcoal text-white py-20 lg:py-32 relative overflow-hidden bg-fixed bg-[url('assets/images/applications/app_bedsheets.jpg')] bg-cover bg-center">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-utp-green/40 mix-blend-multiply"></div>
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 md:p-12 rounded-2xl shadow-2xl max-w-4xl w-full reveal-item reveal-visible">
+                    <p class="text-sm font-bold text-utp-gold tracking-widest uppercase mb-4 drop-shadow-md">END-USE APPLICATIONS</p>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 text-white drop-shadow-lg">Engineered for Purpose</h1>
+                    <p class="text-lg md:text-xl text-gray-100 font-medium mb-8 max-w-3xl mx-auto drop-shadow-md">From luxury home textiles to heavy-duty industrial workwear, our processing ensures your fabrics meet the strict physical demands of their end-use.</p>
+                </div>
             </div>
         </section>
 
-        <section class="py-20 bg-white">
+        <section class="py-24 bg-white">
             <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                    <!-- Application 1 -->
-                    <div class="card p-0 flex flex-col h-full">
-                        <div class="aspect-[4/3] bg-gray-200 relative overflow-hidden">
-                            <img src="assets/images/applications/app_bedsheets.jpg" alt="Bedsheets" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-xl font-bold text-utp-charcoal mb-2">Bedsheets & Bed Linens</h3>
-                            <p class="text-gray-600 text-sm flex-1">Processing wide-width woven cotton and blended fabrics for export-grade bed sheets. Ensuring softness, exact shade matching, and controlled shrinkage suitable for home textiles.</p>
-                        </div>
-                    </div>
-
-                    <!-- Application 2 -->
-                    <div class="card p-0 flex flex-col h-full">
-                        <div class="aspect-[4/3] bg-gray-200 relative overflow-hidden">
-                            <img src="assets/images/applications/app_totebags.jpg" alt="Tote Bags" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-xl font-bold text-utp-charcoal mb-2">Tote & Carrier Bags</h3>
-                            <p class="text-gray-600 text-sm flex-1">Durable solid dyeing and precision printing for woven fabrics used in reusable bags, ensuring high color fastness even under heavy use.</p>
-                        </div>
-                    </div>
-
-                    <!-- Application 3 -->
-                    <div class="card p-0 flex flex-col h-full">
-                        <div class="aspect-[4/3] bg-gray-200 relative overflow-hidden">
-                            <img src="assets/images/applications/app_kitchen_linens.jpg" alt="Kitchen Linens" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-xl font-bold text-utp-charcoal mb-2">Kitchen & Table Linens</h3>
-                            <p class="text-gray-600 text-sm flex-1">Handling fabrics for aprons, tablecloths, and napkins with processing that guarantees resistance to frequent industrial and domestic washing.</p>
-                        </div>
-                    </div>
+                <div class="text-center mb-16 max-w-3xl mx-auto reveal-item">
+                    <h2 class="text-3xl font-bold font-heading text-utp-charcoal mb-4">Visual Storytelling</h2>
+                    <p class="text-gray-600 text-lg">Hover over any application sector to reveal our processing capabilities and recommended fabric constructions.</p>
                 </div>
-                
-                <div class="bg-gray-50 p-8 md:p-12 border border-gray-200 rounded-sm text-center">
-                    <h3 class="text-2xl font-bold font-heading text-utp-charcoal mb-4">Have a different application?</h3>
-                    <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Our technical team can assess your specific fabric and end-use requirements to determine the most suitable processing methods.</p>
-                    <a href="/contact.html" class="btn btn-secondary">Discuss Your Application</a>
+
+                <!-- Masonry-style Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-max">
+                    
+                    <!-- Application 1: Tall Card -->
+                    <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer h-[500px] md:row-span-2 reveal-item">
+                        <img src="assets/images/applications/app_bedsheets.jpg" alt="Bedsheets" class="w-full h-full object-cover img-zoom">
+                        
+                        <!-- Default Title (Fades out on hover) -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-8 transition-opacity duration-500 group-hover:opacity-0">
+                            <h3 class="text-3xl font-bold text-white drop-shadow-md">Bedsheets &<br>Bed Linens</h3>
+                        </div>
+
+                        <!-- Slide-up Overlay -->
+                        <div class="absolute inset-0 bg-utp-green/95 backdrop-blur-sm p-8 flex flex-col justify-end overlay-slide">
+                            <h3 class="text-2xl font-bold text-utp-gold mb-3">Bedsheets & Bed Linens</h3>
+                            <p class="text-white/90 text-sm mb-6 leading-relaxed">Processing wide-width woven cotton and blended fabrics for export-grade bed sheets. Ensuring softness, exact shade matching, and controlled shrinkage suitable for home textiles.</p>
+                            
+                            <div class="border-t border-white/20 pt-4">
+                                <span class="text-xs font-bold text-white uppercase tracking-wider block mb-2">Recommended Constructions</span>
+                                <ul class="text-sm text-white/80 space-y-1">
+                                    <li>• 40×40 / 110×90 / 120" Plain</li>
+                                    <li>• 200 TC to 400 TC Compact Combed</li>
+                                    <li>• PC (65/35 Blend)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Application 2: Standard Card -->
+                    <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer h-[350px] reveal-item" style="transition-delay: 100ms;">
+                        <img src="assets/images/applications/app_totebags.jpg" alt="Tote Bags" class="w-full h-full object-cover img-zoom">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-8 transition-opacity duration-500 group-hover:opacity-0">
+                            <h3 class="text-2xl font-bold text-white drop-shadow-md">Tote & Carrier Bags</h3>
+                        </div>
+
+                        <div class="absolute inset-0 bg-utp-green/95 backdrop-blur-sm p-8 flex flex-col justify-end overlay-slide">
+                            <h3 class="text-2xl font-bold text-utp-gold mb-3">Tote & Carrier Bags</h3>
+                            <p class="text-white/90 text-sm mb-6 leading-relaxed">Durable solid dyeing and precision printing for woven fabrics used in reusable bags, ensuring high color fastness even under heavy use.</p>
+                            
+                            <div class="border-t border-white/20 pt-4">
+                                <span class="text-xs font-bold text-white uppercase tracking-wider block mb-2">Recommended Constructions</span>
+                                <ul class="text-sm text-white/80 space-y-1">
+                                    <li>• 20×20 / 96×48 / 63" Drill</li>
+                                    <li>• Heavy Canvas & OE Cotton</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Application 3: Standard Card -->
+                    <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer h-[350px] reveal-item" style="transition-delay: 200ms;">
+                        <img src="assets/images/applications/app_kitchen_linens.jpg" alt="Kitchen Linens" class="w-full h-full object-cover img-zoom">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-8 transition-opacity duration-500 group-hover:opacity-0">
+                            <h3 class="text-2xl font-bold text-white drop-shadow-md">Kitchen Linens</h3>
+                        </div>
+
+                        <div class="absolute inset-0 bg-utp-green/95 backdrop-blur-sm p-8 flex flex-col justify-end overlay-slide">
+                            <h3 class="text-2xl font-bold text-utp-gold mb-3">Kitchen Linens</h3>
+                            <p class="text-white/90 text-sm mb-6 leading-relaxed">Handling fabrics for aprons, tablecloths, and napkins with processing that guarantees resistance to frequent industrial and domestic washing.</p>
+                            
+                            <div class="border-t border-white/20 pt-4">
+                                <span class="text-xs font-bold text-white uppercase tracking-wider block mb-2">Recommended Constructions</span>
+                                <ul class="text-sm text-white/80 space-y-1">
+                                    <li>• 16×12 / 84×48 / 71" Drill</li>
+                                    <li>• 40×40 / 124×70 / 63" Plain</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Application 4: Standard Card (Using facility image as placeholder) -->
+                    <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer h-[350px] lg:h-[500px] reveal-item" style="transition-delay: 300ms;">
+                        <img src="assets/images/services/solid_dyed_fabric.jpg" alt="Workwear" class="w-full h-full object-cover img-zoom">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-8 transition-opacity duration-500 group-hover:opacity-0">
+                            <h3 class="text-2xl font-bold text-white drop-shadow-md">Industrial Workwear</h3>
+                        </div>
+
+                        <div class="absolute inset-0 bg-utp-green/95 backdrop-blur-sm p-8 flex flex-col justify-end overlay-slide">
+                            <h3 class="text-2xl font-bold text-utp-gold mb-3">Industrial Workwear</h3>
+                            <p class="text-white/90 text-sm mb-6 leading-relaxed">Processing highly durable drill and twill fabrics engineered for harsh industrial environments, ensuring exceptional color fastness and tear resistance.</p>
+                            
+                            <div class="border-t border-white/20 pt-4">
+                                <span class="text-xs font-bold text-white uppercase tracking-wider block mb-2">Recommended Constructions</span>
+                                <ul class="text-sm text-white/80 space-y-1">
+                                    <li>• 20×16 / 108×56 / 67" Drill</li>
+                                    <li>• Compact Stretch Collections</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Application 5: Standard Card (Using facility image as placeholder) -->
+                    <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer h-[350px] lg:h-[500px] lg:-mt-[150px] reveal-item" style="transition-delay: 400ms;">
+                        <img src="assets/images/services/finished_fabric.jpg" alt="Hospitality" class="w-full h-full object-cover img-zoom">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-8 transition-opacity duration-500 group-hover:opacity-0">
+                            <h3 class="text-2xl font-bold text-white drop-shadow-md">Hospitality & Institutional</h3>
+                        </div>
+
+                        <div class="absolute inset-0 bg-utp-green/95 backdrop-blur-sm p-8 flex flex-col justify-end overlay-slide">
+                            <h3 class="text-2xl font-bold text-utp-gold mb-3">Hospitality Fabrics</h3>
+                            <p class="text-white/90 text-sm mb-6 leading-relaxed">Supplying premium processed fabrics for hotels, hospitals, and institutions that require commercial-grade durability and pristine aesthetics.</p>
+                            
+                            <div class="border-t border-white/20 pt-4">
+                                <span class="text-xs font-bold text-white uppercase tracking-wider block mb-2">Recommended Constructions</span>
+                                <ul class="text-sm text-white/80 space-y-1">
+                                    <li>• Combed Compact 132×72</li>
+                                    <li>• 100% Cotton & Blends</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Discuss Application Banner -->
+        <section class="py-16 bg-gray-50 border-t border-b border-gray-200">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white p-10 md:p-14 border border-gray-100 rounded-2xl shadow-xl text-center transform transition-transform hover:-translate-y-1">
+                    <h3 class="text-3xl font-bold font-heading text-utp-charcoal mb-4">Developing a new product?</h3>
+                    <p class="text-gray-600 mb-8 max-w-2xl mx-auto text-lg">Our technical team can assess your specific fabric and end-use requirements to determine the most suitable processing methods and coatings.</p>
+                    <a href="/contact.html" class="btn btn-primary text-lg px-8 py-3 bg-utp-green text-white hover:bg-utp-charcoal hover:text-utp-gold transition-colors">Discuss Your Application</a>
                 </div>
             </div>
         </section>
@@ -78,7 +184,7 @@
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6">Request a Processing Quote</h2>
                 <p class="text-lg text-gray-200 mb-10 max-w-2xl mx-auto">Submit your technical specifications for an accurate technical assessment and quotation.</p>
-                <a href="/contact.html" class="btn btn-primary text-lg px-8 py-3">Submit Specifications</a>
+                <a href="/contact.html" class="btn btn-primary text-lg px-8 py-3 bg-utp-gold text-white hover:bg-white hover:text-utp-gold shadow-lg">Submit Specifications</a>
             </div>
         </section>
     </main>

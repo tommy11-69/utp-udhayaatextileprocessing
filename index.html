@@ -1,372 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Udhayaa Textile Processing</title>
-    <meta name="description" content="Dependable Fabric Supply & Experienced Textile Processing. Over 30 years of experience in solid-dyed and printed fabrics.">
+    <title>Udhayaa Textile Processing | Export-Grade Fabric Solutions</title>
+    <meta name="description" content="Dependable Fabric Supply & Experienced Textile Processing. Over 30 years of experience in solid-dyed and printed fabrics for B2B exporters.">
     <meta property="og:title" content="Udhayaa Textile Processing">
     <meta property="og:description" content="Dependable Fabric Supply & Experienced Textile Processing. Over 30 years of experience in solid-dyed and printed fabrics.">
     <meta property="og:type" content="website">
-        <link rel="icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
+    <link rel="icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/js/tailwind-config.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    
+    <style>
+        /* Smooth image zoom on hover */
+        .img-zoom { transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); }
+        .group:hover .img-zoom { transform: scale(1.08); }
+        
+        /* Slide up overlay for services */
+        .overlay-slide {
+            transform: translateY(100%);
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .group:hover .overlay-slide { transform: translateY(0); }
+    </style>
 </head>
-<body class="antialiased">
+<body class="antialiased bg-gray-50">
     
     <utp-header></utp-header>
 
-    <!-- MAIN CONTENT -->
     <main id="main-content">
-        <!-- SECTION: Hero -->
-        <section class="bg-utp-green text-white py-20 lg:py-32 relative overflow-hidden">
-            <!-- Background Pattern / Overlay -->
-            <div class="absolute inset-0 opacity-100 bg-[url('assets/images/backgrounds/hero_bg.jpg')] bg-cover bg-center mix-blend-overlay"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-black/5 to-transparent"></div>
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex justify-center text-center">
-                <div class="bg-white/15 backdrop-blur-md border border-white/20 p-8 md:p-16 rounded-2xl shadow-2xl max-w-5xl w-full reveal-item reveal-visible">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 text-utp-charcoal drop-shadow-sm">Experienced Textile Processing.<br>Dependable Fabric Supply.</h1>
-                    <p class="text-lg md:text-xl text-gray-900 font-medium mb-10 max-w-3xl mx-auto font-body drop-shadow-sm">Based in Erode, Tamil Nadu, we bring 30+ years of experience to solid-dyed and printed fabric supply for B2B exporters.</p>
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <a href="/contact.html" class="btn btn-primary text-lg px-8 py-3 w-full sm:w-auto shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">Request a Quote</a>
-                        <a href="/services.html" class="btn bg-white/80 text-utp-charcoal font-bold border border-white hover:bg-white transition-colors text-lg px-8 py-3 w-full sm:w-auto shadow-lg hover:shadow-xl hover:-translate-y-1">Explore Our Services</a>
+        <!-- Parallax Glassmorphism Hero -->
+        <section class="bg-utp-charcoal text-white py-24 lg:py-40 relative overflow-hidden bg-fixed bg-[url('assets/images/backgrounds/hero_bg.jpg')] bg-cover bg-center">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80 mix-blend-multiply"></div>
+            
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 md:p-16 rounded-3xl shadow-2xl max-w-5xl w-full reveal-item reveal-visible transform hover:scale-[1.01] transition-transform duration-500">
+                    <p class="text-sm font-bold text-utp-gold tracking-widest uppercase mb-4 drop-shadow-md">A LEGACY OF QUALITY</p>
+                    <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold font-heading mb-6 text-white drop-shadow-lg leading-tight">Experienced Textile Processing.<br>Dependable Fabric Supply.</h1>
+                    <p class="text-lg md:text-xl text-gray-200 font-medium mb-10 max-w-3xl mx-auto font-body drop-shadow-md">Based in Erode, Tamil Nadu, we bring 30+ years of technical expertise to solid-dyed and printed fabric supply for B2B exporters worldwide.</p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <a href="/contact.html" class="btn btn-primary bg-utp-gold text-white hover:bg-white hover:text-utp-gold text-lg px-8 py-4 w-full sm:w-auto shadow-lg hover:shadow-xl transition-all duration-300 rounded-full">Request a Quote</a>
+                        <a href="/services.html" class="btn bg-white/10 backdrop-blur-sm text-white border border-white/40 hover:bg-white hover:text-utp-charcoal transition-colors text-lg px-8 py-4 w-full sm:w-auto shadow-lg rounded-full">Explore Our Services</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION: Experience/Trust Highlights -->
-        <section class="py-12 bg-gray-50 border-b border-gray-200">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-200">
-                    <div class="p-4">
-                        <p class="text-3xl font-bold font-heading text-utp-green mb-2">30+ Years</p>
-                        <p class="text-gray-600 font-medium text-sm">Industry Experience</p>
+        <!-- Number Counters Section -->
+        <section class="py-12 bg-white relative z-20 -mt-16 mx-4 sm:mx-6 lg:mx-auto max-w-[1000px] rounded-2xl shadow-xl border border-gray-100">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                <div class="p-4 counter-box">
+                    <div class="text-5xl font-black text-utp-green mb-2 flex items-center justify-center">
+                        <span class="counter" data-target="30">0</span><span class="text-utp-gold">+</span>
                     </div>
-                    <div class="p-4">
-                        <p class="text-3xl font-bold font-heading text-utp-green mb-2">Solid-Dyed & Printed</p>
-                        <p class="text-gray-600 font-medium text-sm">Specialized Processing</p>
+                    <p class="text-gray-500 font-bold uppercase tracking-widest text-sm">Years Experience</p>
+                </div>
+                <div class="p-4 counter-box pt-8 md:pt-4">
+                    <div class="text-5xl font-black text-utp-green mb-2 flex items-center justify-center">
+                        <span class="counter" data-target="10">0</span><span class="text-utp-gold">M+</span>
                     </div>
-                    <div class="p-4">
-                        <p class="text-3xl font-bold font-heading text-utp-green mb-2">Quality-Focused</p>
-                        <p class="text-gray-600 font-medium text-sm">Reliable Output</p>
+                    <p class="text-gray-500 font-bold uppercase tracking-widest text-sm">Meters Processed Annually</p>
+                </div>
+                <div class="p-4 counter-box pt-8 md:pt-4">
+                    <div class="text-5xl font-black text-utp-green mb-2 flex items-center justify-center">
+                        <span class="counter" data-target="100">0</span><span class="text-utp-gold">%</span>
                     </div>
+                    <p class="text-gray-500 font-bold uppercase tracking-widest text-sm">Export Quality Assured</p>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION: Certifications Banner -->
-        <section class="bg-gray-100 border-b border-gray-200 py-8 overflow-hidden">
+        <!-- SECTION: Certifications Marquee (Greyscale) -->
+        <section class="bg-gray-50 py-16 overflow-hidden">
             <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                <p class="text-center text-sm font-semibold text-gray-500 uppercase tracking-wider mb-6">Manufacturing to Global Standards</p>
+                <p class="text-center text-sm font-bold text-gray-400 uppercase tracking-widest mb-10">Manufacturing to Global Standards</p>
                 <!-- Carousel container -->
-                <div class="relative flex overflow-x-hidden group mt-4">
+                <div class="relative flex overflow-x-hidden group">
                     <!-- Edge fade masks -->
-                    <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-gray-100 to-transparent z-10 pointer-events-none"></div>
-                    <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-gray-100 to-transparent z-10 pointer-events-none"></div>
+                    <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none"></div>
+                    <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none"></div>
                     
-                    <div class="animate-marquee flex items-center gap-12 md:gap-20 transition-all duration-500 py-4">
+                    <div class="animate-marquee flex items-center gap-16 md:gap-24 transition-all duration-500 py-4 opacity-70 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-500">
                         <!-- Logos Batch 1 -->
-                        <div class="flex items-center gap-12 md:gap-20">
-                            <div class="flex flex-col items-center min-w-[100px]"><img src="assets/images/certifications/oeko-tex.png" alt="OEKO-TEX" class="h-16 w-auto object-contain mb-3"><span class="text-[10px] font-bold text-gray-600 tracking-wider uppercase text-center">OEKO-TEX</span></div>
-                            <div class="flex flex-col items-center min-w-[100px]"><img src="assets/images/certifications/gots.png" alt="GOTS" class="h-16 w-auto object-contain mb-3"><span class="text-[10px] font-bold text-gray-600 tracking-wider uppercase text-center">GOTS</span></div>
-                            <div class="flex flex-col items-center min-w-[100px]"><img src="assets/images/certifications/fsc.svg" alt="FSC" class="h-16 w-auto object-contain mb-3"><span class="text-[10px] font-bold text-gray-600 tracking-wider uppercase text-center">FSC</span></div>
-                            <div class="flex flex-col items-center min-w-[100px]"><img src="assets/images/certifications/grs.svg" alt="GRS" class="h-16 w-auto object-contain mb-3"><span class="text-[10px] font-bold text-gray-600 tracking-wider uppercase text-center">GRS</span></div>
-                            <div class="flex flex-col items-center min-w-[100px]"><img src="assets/images/certifications/ocs.svg" alt="OCS" class="h-16 w-auto object-contain mb-3"><span class="text-[10px] font-bold text-gray-600 tracking-wider uppercase text-center">OCS</span></div>
-                            <div class="flex flex-col items-center min-w-[100px]"><img src="assets/images/certifications/zdhc.svg" alt="ZDHC Zero" class="h-16 w-auto object-contain mb-3"><span class="text-[10px] font-bold text-gray-600 tracking-wider uppercase text-center">ZDHC Zero</span></div>
-                            <div class="flex flex-col items-center min-w-[100px]"><img src="assets/images/certifications/zdhc_ww.svg" alt="ZDHC Wastewater" class="h-16 w-auto object-contain mb-3"><span class="text-[10px] font-bold text-gray-600 tracking-wider uppercase text-center">ZDHC Waste</span></div>
-                            <div class="flex flex-col items-center min-w-[100px]"><img src="assets/images/certifications/tuv.svg" alt="TUV" class="h-16 w-auto object-contain mb-3"><span class="text-[10px] font-bold text-gray-600 tracking-wider uppercase text-center">TÜV Rheinland</span></div>
-                            <div class="flex flex-col items-center min-w-[100px]"><img src="assets/images/certifications/higg.svg" alt="Higg" class="h-16 w-auto object-contain mb-3"><span class="text-[10px] font-bold text-gray-600 tracking-wider uppercase text-center">Cascale Higg</span></div>
+                        <div class="flex items-center gap-16 md:gap-24">
+                            <img src="assets/images/certifications/oeko-tex.png" alt="OEKO-TEX" class="h-14 w-auto object-contain">
+                            <img src="assets/images/certifications/gots.png" alt="GOTS" class="h-14 w-auto object-contain">
+                            <img src="assets/images/certifications/fsc.svg" alt="FSC" class="h-14 w-auto object-contain">
+                            <img src="assets/images/certifications/grs.svg" alt="GRS" class="h-14 w-auto object-contain">
+                            <img src="assets/images/certifications/ocs.svg" alt="OCS" class="h-14 w-auto object-contain">
+                            <img src="assets/images/certifications/zdhc.svg" alt="ZDHC Zero" class="h-14 w-auto object-contain">
+                            <img src="assets/images/certifications/zdhc_ww.svg" alt="ZDHC Wastewater" class="h-14 w-auto object-contain">
+                            <img src="assets/images/certifications/tuv.svg" alt="TUV" class="h-14 w-auto object-contain">
+                            <img src="assets/images/certifications/higg.svg" alt="Higg" class="h-14 w-auto object-contain">
                         </div>
-                        
                         <!-- Logos Batch 2 (Duplicate for seamless loop) -->
-                        <div class="flex items-center gap-12 md:gap-20">
-                            <div class="flex flex-col items-center min-w-[100px]"><img src="assets/images/certifications/oeko-tex.png" alt="OEKO-TEX" class="h-16 w-auto object-contain mb-3"><span class="text-[10px] font-bold text-gray-600 tracking-wider uppercase text-center">OEKO-TEX</span></div>
-                            <div class="flex flex-col items-center min-w-[100px]"><img src="assets/images/certifications/gots.png" alt="GOTS" class="h-16 w-auto object-contain mb-3"><span class="text-[10px] font-bold text-gray-600 tracking-wider uppercase text-center">GOTS</span></div>
-                            <div class="flex flex-col items-center min-w-[100px]"><img src="assets/images/certifications/fsc.svg" alt="FSC" class="h-16 w-auto object-contain mb-3"><span class="text-[10px] font-bold text-gray-600 tracking-wider uppercase text-center">FSC</span></div>
-                            <div class="flex flex-col items-center min-w-[100px]"><img src="assets/images/certifications/grs.svg" alt="GRS" class="h-16 w-auto object-contain mb-3"><span class="text-[10px] font-bold text-gray-600 tracking-wider uppercase text-center">GRS</span></div>
-                            <div class="flex flex-col items-center min-w-[100px]"><img src="assets/images/certifications/ocs.svg" alt="OCS" class="h-16 w-auto object-contain mb-3"><span class="text-[10px] font-bold text-gray-600 tracking-wider uppercase text-center">OCS</span></div>
-                            <div class="flex flex-col items-center min-w-[100px]"><img src="assets/images/certifications/zdhc.svg" alt="ZDHC Zero" class="h-16 w-auto object-contain mb-3"><span class="text-[10px] font-bold text-gray-600 tracking-wider uppercase text-center">ZDHC Zero</span></div>
-                            <div class="flex flex-col items-center min-w-[100px]"><img src="assets/images/certifications/zdhc_ww.svg" alt="ZDHC Wastewater" class="h-16 w-auto object-contain mb-3"><span class="text-[10px] font-bold text-gray-600 tracking-wider uppercase text-center">ZDHC Waste</span></div>
-                            <div class="flex flex-col items-center min-w-[100px]"><img src="assets/images/certifications/tuv.svg" alt="TUV" class="h-16 w-auto object-contain mb-3"><span class="text-[10px] font-bold text-gray-600 tracking-wider uppercase text-center">TÜV Rheinland</span></div>
-                            <div class="flex flex-col items-center min-w-[100px]"><img src="assets/images/certifications/higg.svg" alt="Higg" class="h-16 w-auto object-contain mb-3"><span class="text-[10px] font-bold text-gray-600 tracking-wider uppercase text-center">Cascale Higg</span></div>
+                        <div class="flex items-center gap-16 md:gap-24">
+                            <img src="assets/images/certifications/oeko-tex.png" alt="OEKO-TEX" class="h-14 w-auto object-contain">
+                            <img src="assets/images/certifications/gots.png" alt="GOTS" class="h-14 w-auto object-contain">
+                            <img src="assets/images/certifications/fsc.svg" alt="FSC" class="h-14 w-auto object-contain">
+                            <img src="assets/images/certifications/grs.svg" alt="GRS" class="h-14 w-auto object-contain">
+                            <img src="assets/images/certifications/ocs.svg" alt="OCS" class="h-14 w-auto object-contain">
+                            <img src="assets/images/certifications/zdhc.svg" alt="ZDHC Zero" class="h-14 w-auto object-contain">
+                            <img src="assets/images/certifications/zdhc_ww.svg" alt="ZDHC Wastewater" class="h-14 w-auto object-contain">
+                            <img src="assets/images/certifications/tuv.svg" alt="TUV" class="h-14 w-auto object-contain">
+                            <img src="assets/images/certifications/higg.svg" alt="Higg" class="h-14 w-auto object-contain">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION: About Intro -->
-        <section class="py-20 bg-white">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-bold font-heading text-utp-charcoal mb-6">Built on Experience.<br><span class="text-utp-green">Focused on Fabric Quality.</span></h2>
-                    <p class="text-gray-600 mb-6 text-lg">Serving the woven textile industry with dependable processing and clear communication. We understand your specifications and supply processed fabrics that meet your requirements on time.</p>
-                    <p class="text-gray-600 mb-8">We offer realistic lead times based on actual capacity and leverage over three decades of industry knowledge to ensure your export requirements are met consistently.</p>
-                    <a href="/about.html" class="text-link font-medium inline-flex items-center">
-                        Learn more about our history
-                        <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </a>
-                </div>
-                <div class="lg:w-1/2">
-                    <div class="aspect-[4/3] bg-gray-200 rounded-sm flex items-center justify-center text-gray-500 overflow-hidden relative shadow-sm border border-gray-100">
-                        <img src="assets/images/facility/hero_factory.jpg" alt="Udhayaa Factory Floor" class="w-full h-full object-cover">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION: Services -->
-        <section class="py-20 bg-gray-50">
+        <!-- SECTION: Dynamic Services Reveal -->
+        <section class="py-24 bg-white border-t border-gray-100">
             <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold font-heading text-utp-charcoal mb-4">Greige-to-Finished Fabric Processing</h2>
-                    <p class="text-gray-600 text-lg">We supply solid-dyed, printed, and finished fabrics aligned exactly to your technical specifications.</p>
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal-item">
+                    <h2 class="text-4xl font-bold font-heading text-utp-charcoal mb-4">Greige-to-Finished Mastery</h2>
+                    <p class="text-gray-600 text-lg">Hover to explore our core processing capabilities aligned exactly to your technical specifications.</p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Service Card 1 -->
-                    <div class="card p-0 flex flex-col h-full group hover:shadow-md transition-shadow">
-                        <div class="aspect-[4/3] bg-gray-200 relative overflow-hidden">
-                            <img src="assets/images/facility/facility_interior.jpg" alt="Greige to Finished Fabric" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-xl font-bold text-utp-charcoal mb-2 group-hover:text-utp-green transition-colors">Greige-to-Finished</h3>
-                            <p class="text-gray-600 text-sm mb-4 flex-1">Complete end-to-end processing from raw greige fabric to final finished output according to exact buyer specifications.</p>
-                            <a href="/services.html" class="text-link text-sm font-medium inline-flex items-center mt-auto">
-                                Details <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                            </a>
-                        </div>
-                    </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     
-                    <!-- Service Card 2 -->
-                    <div class="card p-0 flex flex-col h-full group hover:shadow-md transition-shadow">
-                        <div class="aspect-[4/3] bg-gray-200 relative overflow-hidden">
-                            <img src="assets/images/services/solid_dyed_fabric.jpg" alt="Solid Dyed Fabric" class="w-full h-full object-cover">
+                    <!-- Service 1 -->
+                    <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer h-[450px] reveal-item">
+                        <img src="assets/images/services/solid_dyed_fabric.jpg" alt="Solid Dyed Fabric" class="w-full h-full object-cover img-zoom">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8 transition-opacity duration-500 group-hover:opacity-0">
+                            <h3 class="text-3xl font-bold text-white drop-shadow-md">Solid-Dyed<br>Fabrics</h3>
+                            <div class="mt-4 w-12 h-1 bg-utp-gold"></div>
                         </div>
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-xl font-bold text-utp-charcoal mb-2 group-hover:text-utp-green transition-colors">Solid-Dyed Fabrics</h3>
-                            <p class="text-gray-600 text-sm mb-4 flex-1">Consistent shade matching and high-quality solid dyeing for woven fabrics intended for demanding export markets.</p>
-                            <a href="/services.html" class="text-link text-sm font-medium inline-flex items-center mt-auto">
-                                Details <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Service Card 3 -->
-                    <div class="card p-0 flex flex-col h-full group hover:shadow-md transition-shadow">
-                        <div class="aspect-[4/3] bg-gray-200 relative overflow-hidden">
-                            <img src="assets/images/services/printed_fabric.jpg" alt="Printed Fabrics" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-xl font-bold text-utp-charcoal mb-2 group-hover:text-utp-green transition-colors">Printed Fabrics</h3>
-                            <p class="text-gray-600 text-sm mb-4 flex-1">Precision fabric printing capable of handling complex designs with excellent color fastness and registration.</p>
-                            <a href="/services.html" class="text-link text-sm font-medium inline-flex items-center mt-auto">
-                                Details <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Service Card 4 -->
-                    <div class="card p-0 flex flex-col h-full group hover:shadow-md transition-shadow">
-                        <div class="aspect-[4/3] bg-gray-200 relative overflow-hidden">
-                            <img src="assets/images/services/finished_fabric.jpg" alt="Finished Processing" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-xl font-bold text-utp-charcoal mb-2 group-hover:text-utp-green transition-colors">Other Finished</h3>
-                            <p class="text-gray-600 text-sm mb-4 flex-1">Specialized finishing processes to achieve the required hand feel, shrinkage control, and performance characteristics.</p>
-                            <a href="/services.html" class="text-link text-sm font-medium inline-flex items-center mt-auto">
-                                Details <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mt-12 text-center">
-                    <a href="/services.html" class="btn btn-secondary">View Complete Capabilities</a>
-                </div>
-            </div>
-        </section>
 
-        <!-- SECTION: Applications & Why Choose Us -->
-        <section class="py-20 bg-white border-b border-gray-100">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                    <!-- Applications -->
-                    <div>
-                        <h2 class="text-3xl font-bold font-heading text-utp-charcoal mb-6">Woven Textile Applications</h2>
-                        <p class="text-gray-600 mb-8">Our processing capabilities are perfectly suited for exporters manufacturing a variety of woven textile products.</p>
-                        <ul class="space-y-4">
-                            <li class="flex items-start">
-                                <svg class="h-6 w-6 text-utp-green mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                                <span class="text-gray-700 font-medium">Bedsheets & Bed Linens</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="h-6 w-6 text-utp-green mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                                <span class="text-gray-700 font-medium">Tote Bags & Reusable Carrier Bags</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="h-6 w-6 text-utp-green mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                                <span class="text-gray-700 font-medium">Kitchen & Table Linens</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="h-6 w-6 text-utp-green mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                                <span class="text-gray-700 font-medium">Home Furnishing Fabrics</span>
-                            </li>
-                        </ul>
-                        <div class="mt-8">
-                            <a href="/applications.html" class="text-link font-medium">Explore all applications &rarr;</a>
+                        <div class="absolute inset-0 bg-utp-green/95 backdrop-blur-sm p-8 flex flex-col justify-end overlay-slide">
+                            <h3 class="text-2xl font-bold text-utp-gold mb-3">Solid-Dyed Fabrics</h3>
+                            <p class="text-white/90 text-sm mb-8 leading-relaxed">Consistent shade matching and high-quality solid dyeing for woven fabrics intended for demanding export markets. Pad-batch and continuous dyeing capabilities.</p>
+                            
+                            <a href="/services.html" class="inline-flex items-center text-white font-bold group-hover:text-utp-gold transition-colors">
+                                Explore Dyeing <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                            </a>
                         </div>
                     </div>
-                    
-                    <!-- Why Choose Us -->
-                    <div class="bg-gray-50 p-8 rounded-sm border border-gray-200">
-                        <h2 class="text-2xl font-bold font-heading text-utp-charcoal mb-6">Why Partner With Us</h2>
-                        <div class="space-y-6">
-                            <div class="flex gap-4">
-                                <div class="w-10 h-10 rounded-full bg-utp-green/10 flex items-center justify-center flex-shrink-0">
-                                    <span class="text-utp-green font-bold">1</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-900 mb-1">Detailed Specification Handling</h4>
-                                    <p class="text-gray-600 text-sm">We mandate detailed specifications and sampling approvals to achieve your exact shade or print.</p>
-                                </div>
-                            </div>
-                            <div class="flex gap-4">
-                                <div class="w-10 h-10 rounded-full bg-utp-green/10 flex items-center justify-center flex-shrink-0">
-                                    <span class="text-utp-green font-bold">2</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-900 mb-1">Realistic Lead Times</h4>
-                                    <p class="text-gray-600 text-sm">We offer realistic lead times based on our actual capacity, ensuring reliable delivery schedules.</p>
-                                </div>
-                            </div>
-                            <div class="flex gap-4">
-                                <div class="w-10 h-10 rounded-full bg-utp-green/10 flex items-center justify-center flex-shrink-0">
-                                    <span class="text-utp-green font-bold">3</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-900 mb-1">Erode-Based Infrastructure</h4>
-                                    <p class="text-gray-600 text-sm">Strategically located in Tamil Nadu's textile hub to serve the export market efficiently.</p>
-                                </div>
-                            </div>
-                            <div class="flex gap-4">
-                                <div class="w-10 h-10 rounded-full bg-utp-green/10 flex items-center justify-center flex-shrink-0">
-                                    <span class="text-utp-green font-bold">4</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-900 mb-1">B2B Focused</h4>
-                                    <p class="text-gray-600 text-sm">Focused solely on textile processing and processed-fabric supply for professional buyers.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- SECTION: How We Work -->
-        <section class="py-20 bg-gray-50">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold font-heading text-utp-charcoal mb-4">How We Work</h2>
-                    <p class="text-gray-600 text-lg">A structured, 6-stage workflow to ensure your specifications are met exactly.</p>
+                    <!-- Service 2 -->
+                    <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer h-[450px] reveal-item" style="transition-delay: 100ms;">
+                        <img src="assets/images/services/printed_fabric.jpg" alt="Printed Fabric" class="w-full h-full object-cover img-zoom">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8 transition-opacity duration-500 group-hover:opacity-0">
+                            <h3 class="text-3xl font-bold text-white drop-shadow-md">Precision<br>Printing</h3>
+                            <div class="mt-4 w-12 h-1 bg-utp-gold"></div>
+                        </div>
+
+                        <div class="absolute inset-0 bg-utp-green/95 backdrop-blur-sm p-8 flex flex-col justify-end overlay-slide">
+                            <h3 class="text-2xl font-bold text-utp-gold mb-3">Precision Printing</h3>
+                            <p class="text-white/90 text-sm mb-8 leading-relaxed">Advanced rotary screen printing capable of handling complex designs with excellent color fastness, sharp registration, and high repeatability across massive volumes.</p>
+                            
+                            <a href="/services.html" class="inline-flex items-center text-white font-bold group-hover:text-utp-gold transition-colors">
+                                Explore Printing <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer h-[450px] reveal-item" style="transition-delay: 200ms;">
+                        <img src="assets/images/services/finished_fabric.jpg" alt="Finished Fabric" class="w-full h-full object-cover img-zoom">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8 transition-opacity duration-500 group-hover:opacity-0">
+                            <h3 class="text-3xl font-bold text-white drop-shadow-md">Technical<br>Finishing</h3>
+                            <div class="mt-4 w-12 h-1 bg-utp-gold"></div>
+                        </div>
+
+                        <div class="absolute inset-0 bg-utp-green/95 backdrop-blur-sm p-8 flex flex-col justify-end overlay-slide">
+                            <h3 class="text-2xl font-bold text-utp-gold mb-3">Technical Finishing</h3>
+                            <p class="text-white/90 text-sm mb-8 leading-relaxed">Specialized coatings and finishing processes to achieve the required hand feel, exact shrinkage control, and specific performance characteristics (e.g. water repellency).</p>
+                            
+                            <a href="/services.html" class="inline-flex items-center text-white font-bold group-hover:text-utp-gold transition-colors">
+                                Explore Finishing <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
                 
-                <div class="hidden md:flex flex-row justify-between items-start relative">
-                    <!-- Connecting Line Desktop -->
-                    <div class="absolute top-8 left-10 right-10 h-0.5 bg-gray-300 z-0"></div>
-                    
-                    <!-- Stage 1 -->
-                    <div class="flex flex-col items-center relative z-10 w-1/6 px-2">
-                        <div class="w-16 h-16 rounded-full bg-white border-2 border-utp-green flex items-center justify-center mb-4 shadow-sm text-utp-green font-bold text-xl">1</div>
-                        <h4 class="text-center font-bold text-gray-900 text-sm mb-2">Requirement<br>Analysis</h4>
-                    </div>
-                    <!-- Stage 2 -->
-                    <div class="flex flex-col items-center relative z-10 w-1/6 px-2">
-                        <div class="w-16 h-16 rounded-full bg-white border-2 border-utp-green flex items-center justify-center mb-4 shadow-sm text-utp-green font-bold text-xl">2</div>
-                        <h4 class="text-center font-bold text-gray-900 text-sm mb-2">Technical<br>Assessment</h4>
-                    </div>
-                    <!-- Stage 3 -->
-                    <div class="flex flex-col items-center relative z-10 w-1/6 px-2">
-                        <div class="w-16 h-16 rounded-full bg-white border-2 border-utp-green flex items-center justify-center mb-4 shadow-sm text-utp-green font-bold text-xl">3</div>
-                        <h4 class="text-center font-bold text-gray-900 text-sm mb-2">Sampling &<br>Approval</h4>
-                    </div>
-                    <!-- Stage 4 -->
-                    <div class="flex flex-col items-center relative z-10 w-1/6 px-2">
-                        <div class="w-16 h-16 rounded-full bg-utp-green flex items-center justify-center mb-4 shadow-sm text-white font-bold text-xl">4</div>
-                        <h4 class="text-center font-bold text-gray-900 text-sm mb-2">Production<br>Processing</h4>
-                    </div>
-                    <!-- Stage 5 -->
-                    <div class="flex flex-col items-center relative z-10 w-1/6 px-2">
-                        <div class="w-16 h-16 rounded-full bg-white border-2 border-utp-green flex items-center justify-center mb-4 shadow-sm text-utp-green font-bold text-xl">5</div>
-                        <h4 class="text-center font-bold text-gray-900 text-sm mb-2">Quality<br>Control</h4>
-                    </div>
-                    <!-- Stage 6 -->
-                    <div class="flex flex-col items-center relative z-10 w-1/6 px-2">
-                        <div class="w-16 h-16 rounded-full bg-white border-2 border-utp-green flex items-center justify-center mb-4 shadow-sm text-utp-green font-bold text-xl">6</div>
-                        <h4 class="text-center font-bold text-gray-900 text-sm mb-2">Dispatch &<br>Delivery</h4>
-                    </div>
-                </div>
-                
-                <!-- Mobile Layout -->
-                <div class="md:hidden space-y-8 relative pl-4">
-                    <!-- Connecting Line Mobile -->
-                    <div class="absolute top-0 bottom-0 left-[2rem] w-0.5 bg-gray-300 z-0"></div>
-                    
-                    <div class="flex items-center relative z-10">
-                        <div class="w-12 h-12 rounded-full bg-white border-2 border-utp-green flex items-center justify-center shadow-sm text-utp-green font-bold text-lg flex-shrink-0">1</div>
-                        <div class="ml-6">
-                            <h4 class="font-bold text-gray-900 text-lg">Requirement Analysis</h4>
-                        </div>
-                    </div>
-                    <div class="flex items-center relative z-10">
-                        <div class="w-12 h-12 rounded-full bg-white border-2 border-utp-green flex items-center justify-center shadow-sm text-utp-green font-bold text-lg flex-shrink-0">2</div>
-                        <div class="ml-6">
-                            <h4 class="font-bold text-gray-900 text-lg">Technical Assessment</h4>
-                        </div>
-                    </div>
-                    <div class="flex items-center relative z-10">
-                        <div class="w-12 h-12 rounded-full bg-white border-2 border-utp-green flex items-center justify-center shadow-sm text-utp-green font-bold text-lg flex-shrink-0">3</div>
-                        <div class="ml-6">
-                            <h4 class="font-bold text-gray-900 text-lg">Sampling & Approval</h4>
-                        </div>
-                    </div>
-                    <div class="flex items-center relative z-10">
-                        <div class="w-12 h-12 rounded-full bg-utp-green flex items-center justify-center shadow-sm text-white font-bold text-lg flex-shrink-0">4</div>
-                        <div class="ml-6">
-                            <h4 class="font-bold text-gray-900 text-lg">Production Processing</h4>
-                        </div>
-                    </div>
-                    <div class="flex items-center relative z-10">
-                        <div class="w-12 h-12 rounded-full bg-white border-2 border-utp-green flex items-center justify-center shadow-sm text-utp-green font-bold text-lg flex-shrink-0">5</div>
-                        <div class="ml-6">
-                            <h4 class="font-bold text-gray-900 text-lg">Quality Control</h4>
-                        </div>
-                    </div>
-                    <div class="flex items-center relative z-10">
-                        <div class="w-12 h-12 rounded-full bg-white border-2 border-utp-green flex items-center justify-center shadow-sm text-utp-green font-bold text-lg flex-shrink-0">6</div>
-                        <div class="ml-6">
-                            <h4 class="font-bold text-gray-900 text-lg">Dispatch & Delivery</h4>
-                        </div>
-                    </div>
+                <div class="mt-16 text-center reveal-item">
+                    <a href="/services.html" class="btn btn-secondary border-2 px-8 py-3 rounded-full hover:bg-utp-charcoal hover:text-white hover:border-utp-charcoal transition-all">View Complete Capabilities</a>
                 </div>
             </div>
         </section>
 
         <!-- SECTION: Final CTA -->
-        <section class="py-24 bg-utp-green text-white text-center">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6">Have a Fabric Processing Requirement?</h2>
-                <p class="text-lg text-gray-200 mb-10 max-w-2xl mx-auto">Looking for a reliable textile processing supplier? Share your specifications for a technical assessment and quotation.</p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="/contact.html" class="btn btn-primary text-lg px-8 py-3 w-full sm:w-auto">Request a Quote</a>
-                    <a href="tel:+919842756455" class="btn bg-transparent text-white border border-white hover:bg-white hover:text-utp-green transition-colors text-lg px-8 py-3 w-full sm:w-auto">Call Us: +91 9842756455</a>
+        <section class="py-24 bg-utp-green text-white text-center relative overflow-hidden">
+            <div class="absolute -bottom-48 -right-48 w-96 h-96 bg-utp-gold/20 rounded-full blur-3xl"></div>
+            <div class="absolute -top-24 -left-24 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
+            
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 reveal-item">
+                <h2 class="text-4xl md:text-5xl font-bold font-heading mb-6 drop-shadow-md">Ready to Process Your Next Batch?</h2>
+                <p class="text-xl text-gray-100 mb-10 max-w-2xl mx-auto font-medium">Looking for a reliable textile processing supplier? Share your specifications for a technical assessment.</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <a href="/contact.html" class="btn btn-primary bg-utp-gold text-white hover:bg-white hover:text-utp-gold text-lg px-8 py-4 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all rounded-full">Request a Quote</a>
+                    <a href="tel:+919842756455" class="btn bg-transparent text-white border-2 border-white/50 hover:border-white hover:bg-white/10 transition-all text-lg px-8 py-4 rounded-full">Call Us Directly</a>
                 </div>
             </div>
         </section>
@@ -374,7 +207,41 @@
     
     <utp-footer></utp-footer>
 
-    <script src="assets/js/components.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script>
+        // Number Counter Logic
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 15);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        let counterAnimated = false;
+        window.addEventListener('scroll', () => {
+            if (counterAnimated) return;
+            const counterSection = document.querySelector('.counter-box');
+            if(counterSection) {
+                const rect = counterSection.getBoundingClientRect();
+                if(rect.top < window.innerHeight) {
+                    animateCounters();
+                    counterAnimated = true;
+                }
+            }
+        });
+    </script>
 </body>
 </html>
