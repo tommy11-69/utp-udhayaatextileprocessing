@@ -19,6 +19,8 @@ class UTPHeader extends HTMLElement {
                 <a href="/" class="text-link text-sm font-medium hover:text-utp-green nav-link">Home</a>
                 <a href="/about.html" class="text-link text-sm font-medium hover:text-utp-green nav-link">About Us</a>
                 <a href="/services.html" class="text-link text-sm font-medium hover:text-utp-green nav-link">Services</a>
+                <a href="/textile-processing-workflow.html" class="text-link text-sm font-medium hover:text-utp-green nav-link">Workflow</a>
+                <a href="/fabrics.html" class="text-link text-sm font-medium hover:text-utp-green nav-link">Fabric Catalog</a>
                 <a href="/quality.html" class="text-link text-sm font-medium hover:text-utp-green nav-link">Quality</a>
                 <a href="/contact.html" class="text-link text-sm font-medium hover:text-utp-green nav-link">Contact Us</a>
             </nav>
@@ -52,6 +54,8 @@ class UTPHeader extends HTMLElement {
                     <a href="/" class="text-lg font-medium text-utp-charcoal hover:text-utp-green py-2 nav-link">Home</a>
                     <a href="/about.html" class="text-lg font-medium text-utp-charcoal hover:text-utp-green py-2 nav-link">About Us</a>
                     <a href="/services.html" class="text-lg font-medium text-utp-charcoal hover:text-utp-green py-2 nav-link">Services</a>
+                    <a href="/textile-processing-workflow.html" class="text-lg font-medium text-utp-charcoal hover:text-utp-green py-2 nav-link">Workflow</a>
+                    <a href="/fabrics.html" class="text-lg font-medium text-utp-charcoal hover:text-utp-green py-2 nav-link">Fabric Catalog</a>
                     <a href="/applications.html" class="text-lg font-medium text-utp-charcoal hover:text-utp-green py-2 nav-link">Applications</a>
                     <a href="/quality.html" class="text-lg font-medium text-utp-charcoal hover:text-utp-green py-2 nav-link">Quality</a>
                     <a href="/contact.html" class="text-lg font-medium text-utp-charcoal hover:text-utp-green py-2 nav-link">Contact Us</a>
@@ -118,7 +122,10 @@ class UTPFooter extends HTMLElement {
                             <svg class="h-5 w-5 text-utp-gold mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
-                            <a href="tel:+919842756455" class="text-gray-300 hover:text-white transition-colors text-sm">+91 9842756455</a>
+                            <div>
+                                <a href="tel:+919842756455" class="block text-gray-300 hover:text-white transition-colors text-sm">+91 9842756455</a>
+                                <a href="tel:+919566866686" class="block text-gray-300 hover:text-white transition-colors text-sm mt-1">+91 95668 66686</a>
+                            </div>
                         </li>
                         <li class="flex items-center">
                             <svg class="h-5 w-5 text-utp-gold mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
