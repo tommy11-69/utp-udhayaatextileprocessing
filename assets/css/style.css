@@ -1,0 +1,163 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@500;600;700;800&display=swap');
+
+/* Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #252B2A;
+    background-color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #1e2120;
+}
+
+h1 { font-size: 48px; line-height: 1.2; }
+h2 { font-size: 32px; line-height: 1.3; }
+h3 { font-size: 24px; line-height: 1.4; }
+h4 { font-size: 18px; line-height: 1.5; }
+
+/* Links */
+a.text-link {
+    color: #173B36;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+a.text-link:hover {
+    text-decoration: underline;
+}
+
+/* Button Classes */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #C9A66B;
+    color: #252B2A;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #b8955a;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #173B36;
+    border: 1px solid #173B36;
+}
+
+.btn-secondary:hover {
+    background-color: #f3f4f6; /* Very light grey */
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #252B2A;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    transition: all 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #173B36;
+    box-shadow: 0 0 0 2px rgba(23, 59, 54, 0.2);
+}
+
+/* Card Style */
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+/* Focus States */
+:focus-visible {
+    outline: 2px solid #173B36;
+    outline-offset: 2px;
+}
+
+/* Selection Color */
+::selection {
+    background-color: #C9A66B;
+    color: #252B2A;
+}
+
+/* --- Animations & UX --- */
+/* Base reveal class - before intersection */
+.reveal-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* After intersection */
+.reveal-item.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Card Hover Enhancements */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Image Hover inside aspect containers */
+.aspect-\[4\/3\] img, .aspect-\[16\/9\] img {
+    transition: transform 0.5s ease;
+}
+.card:hover .aspect-\[4\/3\] img, .card:hover .aspect-\[16\/9\] img {
+    transform: scale(1.05);
+}
+
+/* Button active state (click scale) */
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* Dynamic Header Scroll State */
+.header-scrolled {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Page fade-in */
+body {
+    animation: fade-in-page 0.4s ease-out forwards;
+}
+
+@keyframes fade-in-page {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

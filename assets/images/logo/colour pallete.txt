@@ -1,0 +1,5 @@
+UTP — Udhayaa Textile Processing
+Forest Green: #173B36
+Muted Gold: #C9A66B
+Charcoal: #252B2A
+White: #FFFFFF

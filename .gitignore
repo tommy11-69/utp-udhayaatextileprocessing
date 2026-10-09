@@ -1,0 +1,11 @@
+# Python scripts used for automation
+*.py
+__pycache__/
+
+# Agent metadata
+.agents/
+.gemini/
+
+# OS files
+.DS_Store
+Thumbs.db
