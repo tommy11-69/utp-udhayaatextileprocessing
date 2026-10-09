@@ -5,339 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Textile Processing Workflow | Udhayaa Textile Processing</title>
     <meta name="description" content="Explore woven fabric processing stages, including singeing, scouring, dyeing, printing, finishing, quality inspection, and dispatch.">
-    <meta property="og:title" content="Textile Processing Workflow | Udhayaa Textile Processing">
-    <meta property="og:description" content="Explore woven fabric processing stages, including singeing, scouring, dyeing, printing, finishing, quality inspection, and dispatch.">
-    <meta property="og:type" content="website">
     <link rel="icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/js/tailwind-config.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        /* Specific styles for the workflow diagram */
-        .workflow-box {
-            background-color: white;
-            border: 2px solid #2a564f;
-            border-radius: 4px;
-            padding: 12px 16px;
-            text-align: center;
-            font-weight: 600;
-            color: #1a1a1a;
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            max-width: 280px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        .workflow-box.conditional {
-            border-style: dashed;
-            border-color: #d4af37;
-            background-color: #fffdf5;
-        }
-        .workflow-arrow {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 30px;
-            color: #2a564f;
-        }
-        .branch-line-horiz {
-            height: 2px;
-            background-color: #2a564f;
-            width: 100%;
-            position: absolute;
-            top: 50%;
-            z-index: 1;
-        }
-        .branch-line-vert {
-            width: 2px;
-            background-color: #2a564f;
-            height: 100%;
-            margin: 0 auto;
-        }
-    </style>
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/main.js" defer></script>
 </head>
-<body class="antialiased">
+<body class="antialiased bg-gray-50">
     
     <utp-header></utp-header>
 
-    <!-- MAIN CONTENT -->
     <main id="main-content">
-        <!-- Section 1: Hero -->
-        <section class="bg-gray-50 py-16 border-b border-gray-200">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <p class="text-sm font-bold text-utp-gold tracking-widest uppercase mb-4">OUR PROCESS</p>
-                <h1 class="text-4xl md:text-5xl font-bold font-heading text-utp-charcoal mb-6">From Greige Fabric to Finished Fabric</h1>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-10">Every stage of textile processing contributes to the final fabric's appearance, performance, and quality. Udhayaa Textile Processing supplies processed woven fabrics for export requirements, with attention to shade, printing, finishing, dimensional stability, and delivery specifications.</p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="/contact.html" class="btn btn-primary text-lg px-8 py-3 w-full sm:w-auto">Discuss Your Processing Requirements</a>
-                    <a href="#workflow" class="btn bg-white text-utp-green border border-utp-green hover:bg-utp-green hover:text-white transition-colors text-lg px-8 py-3 w-full sm:w-auto">Explore Our Processing Workflow</a>
+        <!-- Premium Hero -->
+        <section class="bg-utp-green text-white py-20 lg:py-28 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-40 bg-[url('assets/images/backgrounds/hero_factory.jpg')] bg-cover bg-center mix-blend-overlay"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 md:p-12 rounded-2xl shadow-2xl max-w-4xl w-full reveal-item reveal-visible">
+                    <p class="text-sm font-bold text-utp-gold tracking-widest uppercase mb-4 drop-shadow-md">OUR PROCESS</p>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 text-white drop-shadow-lg">From Greige to Finished Fabric</h1>
+                    <p class="text-lg md:text-xl text-gray-100 font-medium mb-8 max-w-3xl mx-auto drop-shadow-md">Every stage of textile processing contributes to the final fabric's appearance, performance, and quality. We supply processed woven fabrics that meet strict export requirements.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Section 2: Workflow Overview -->
-        <section id="workflow" class="py-20 bg-white">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16 max-w-3xl mx-auto">
-                    <h2 class="text-3xl font-bold font-heading text-utp-charcoal mb-4">The Textile Processing Journey</h2>
-                    <p class="text-gray-600 text-lg mb-4">Explore the major stages involved in transforming greige woven fabric into finished fabric. The exact route depends on the fabric construction, fibre composition, colour, printing requirements, finishing specifications, and buyer standards.</p>
-                    <div class="flex items-center justify-center space-x-6 text-sm font-medium mt-6">
-                        <div class="flex items-center"><div class="w-4 h-4 border-2 border-utp-green mr-2 bg-white"></div> Standard Process</div>
-                        <div class="flex items-center"><div class="w-4 h-4 border-2 border-dashed border-utp-gold mr-2 bg-[#fffdf5]"></div> If Required</div>
-                    </div>
-                </div>
-
-                <!-- HTML/CSS Workflow Diagram -->
-                <div class="max-w-4xl mx-auto flex flex-col items-center">
-                    
-                    <div class="workflow-box">1. Greige Fabric Receipt</div>
-                    <div class="workflow-arrow">↓</div>
-                    <div class="workflow-box">2. Greige Fabric Inspection</div>
-                    <div class="workflow-arrow">↓</div>
-                    <div class="workflow-box">3. Singeing</div>
-                    <div class="workflow-arrow">↓</div>
-                    <div class="workflow-box conditional">4. Desizing <span class="block text-xs font-normal text-gray-500 mt-1">(If required)</span></div>
-                    <div class="workflow-arrow">↓</div>
-                    <div class="workflow-box">5. Scouring</div>
-                    <div class="workflow-arrow">↓</div>
-                    <div class="workflow-box conditional">6. Bleaching <span class="block text-xs font-normal text-gray-500 mt-1">(If required)</span></div>
-                    <div class="workflow-arrow">↓</div>
-                    <div class="workflow-box conditional">7. Mercerizing <span class="block text-xs font-normal text-gray-500 mt-1">(If required)</span></div>
-                    <div class="workflow-arrow">↓</div>
-                    <div class="workflow-box">8. Washing and Neutralization</div>
-                    <div class="workflow-arrow">↓</div>
-                    <div class="workflow-box">9. Route Selection</div>
-                    
-                    <!-- Branching Area -->
-                    <div class="w-full max-w-2xl mt-4 relative">
-                        <!-- Top horizontal connection line -->
-                        <div class="hidden md:block border-t-2 border-utp-green w-[50%] mx-auto h-4 border-l-2 border-r-2"></div>
-                        
-                        <div class="flex flex-col md:flex-row justify-between md:gap-8 mt-4 md:mt-0">
-                            <!-- Solid Dyed Route -->
-                            <div class="flex-1 flex flex-col items-center mb-8 md:mb-0 relative">
-                                <h4 class="font-bold text-utp-green mb-4 bg-white px-4">Solid-Dyed Route</h4>
-                                <div class="workflow-box bg-utp-green/5">10a. Solid Dyeing</div>
-                                <div class="workflow-arrow">↓</div>
-                                <div class="workflow-box bg-utp-green/5">11a. Required washing or soaping</div>
-                                <div class="hidden md:block branch-line-vert h-8 mt-2"></div>
-                            </div>
-                            
-                            <!-- Printed Route -->
-                            <div class="flex-1 flex flex-col items-center relative">
-                                <h4 class="font-bold text-utp-gold mb-4 bg-white px-4">Printed Route</h4>
-                                <div class="workflow-box bg-utp-gold/5 border-utp-gold">10b. Printing</div>
-                                <div class="workflow-arrow text-utp-gold">↓</div>
-                                <div class="workflow-box bg-utp-gold/5 border-utp-gold conditional">11b. Fixation or curing <span class="block text-xs font-normal text-gray-500 mt-1">(As applicable)</span></div>
-                                <div class="workflow-arrow text-utp-gold">↓</div>
-                                <div class="workflow-box bg-utp-gold/5 border-utp-gold conditional">12b. Post-print washing <span class="block text-xs font-normal text-gray-500 mt-1">(If required)</span></div>
-                                <div class="hidden md:block branch-line-vert h-8 mt-2"></div>
-                            </div>
-                        </div>
-                        
-                        <!-- Bottom horizontal connection line -->
-                        <div class="hidden md:block border-b-2 border-utp-green w-[50%] mx-auto h-4 border-l-2 border-r-2 mt-[-10px]"></div>
-                        <div class="workflow-arrow mx-auto h-8 md:h-12">↓</div>
-                    </div>
-                    
-                    <div class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-2 bg-white px-4">Routes Rejoin</div>
-                    <div class="workflow-box">13. Stentering and Width Setting</div>
-                    <div class="workflow-arrow">↓</div>
-                    <div class="workflow-box">14. Finishing Treatments</div>
-                    <div class="workflow-arrow">↓</div>
-                    <div class="workflow-box conditional">15. Sanforizing / Shrinkage Control <span class="block text-xs font-normal text-gray-500 mt-1">(If required)</span></div>
-                    <div class="workflow-arrow">↓</div>
-                    <div class="workflow-box">16. Final Inspection</div>
-                    <div class="workflow-arrow">↓</div>
-                    <div class="workflow-box">17. Quality Testing</div>
-                    <div class="workflow-arrow">↓</div>
-                    <div class="workflow-box">18. Rolling and Measurement</div>
-                    <div class="workflow-arrow">↓</div>
-                    <div class="workflow-box">19. Packing</div>
-                    <div class="workflow-arrow">↓</div>
-                    <div class="workflow-box">20. Dispatch</div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 3: Detailed Processing Stages -->
-        <section class="py-20 bg-gray-50 border-t border-gray-200">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16 max-w-3xl mx-auto">
-                    <h2 class="text-3xl font-bold font-heading text-utp-charcoal mb-4">Understanding Each Processing Stage</h2>
-                    <p class="text-gray-600 text-lg">A detailed technical breakdown of every major step in the woven fabric processing cycle.</p>
+        <!-- Interactive Workflow Section -->
+        <section class="py-20 bg-white relative">
+            <div class="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-bold font-heading text-utp-charcoal mb-4">The Complete Processing Journey</h2>
+                    <p class="text-gray-600 text-lg mb-8">Follow the stages required to transform raw woven fabric into a finished product. Select a specific route below to filter the timeline.</p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Cards -->
-                    <div class="bg-white p-6 border border-gray-200 rounded shadow-sm">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-bold text-lg text-utp-charcoal">1. Greige Fabric Receipt</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-3">Raw woven fabric is received according to the order requirements.</p>
-                        <p class="text-xs text-utp-green font-medium"><span class="text-gray-900 font-bold">Purpose:</span> Establish the incoming fabric quantity and identify the material requiring processing.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 border border-gray-200 rounded shadow-sm">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-bold text-lg text-utp-charcoal">2. Greige Fabric Inspection</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-3">The fabric is checked for visible defects, stains, holes, construction issues, width, and quantity.</p>
-                        <p class="text-xs text-utp-green font-medium"><span class="text-gray-900 font-bold">Purpose:</span> Identify defects and discrepancies before subsequent processing.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 border border-gray-200 rounded shadow-sm">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-bold text-lg text-utp-charcoal">3. Singeing</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-3">Loose surface fibres are removed by controlled burning.</p>
-                        <p class="text-xs text-utp-green font-medium"><span class="text-gray-900 font-bold">Purpose:</span> Improve surface cleanliness and help achieve a smoother fabric appearance, particularly for printing and higher-quality finishes.</p>
-                    </div>
-                    
-                    <div class="bg-[#fffdf5] p-6 border border-utp-gold border-dashed rounded shadow-sm">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-bold text-lg text-utp-charcoal">4. Desizing</h3>
-                            <span class="bg-utp-gold/20 text-utp-gold text-[10px] uppercase font-bold px-2 py-1 rounded">If Required</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-3">Warp sizing agents are removed where present.</p>
-                        <p class="text-xs text-utp-green font-medium"><span class="text-gray-900 font-bold">Purpose:</span> Improve absorbency and prepare the fabric for wet processing.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 border border-gray-200 rounded shadow-sm">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-bold text-lg text-utp-charcoal">5. Scouring</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-3">Natural waxes, oils, and other impurities are removed.</p>
-                        <p class="text-xs text-utp-green font-medium"><span class="text-gray-900 font-bold">Purpose:</span> Improve fabric cleanliness and wetting behaviour.</p>
-                    </div>
-                    
-                    <div class="bg-[#fffdf5] p-6 border border-utp-gold border-dashed rounded shadow-sm">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-bold text-lg text-utp-charcoal">6. Bleaching</h3>
-                            <span class="bg-utp-gold/20 text-utp-gold text-[10px] uppercase font-bold px-2 py-1 rounded">If Required</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-3">Natural colouring matter is reduced when a white or light-coloured base is required.</p>
-                        <p class="text-xs text-utp-green font-medium"><span class="text-gray-900 font-bold">Purpose:</span> Prepare the fabric for suitable dyeing or printing applications.</p>
-                    </div>
-                    
-                    <div class="bg-[#fffdf5] p-6 border border-utp-gold border-dashed rounded shadow-sm">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-bold text-lg text-utp-charcoal">7. Mercerizing</h3>
-                            <span class="bg-utp-gold/20 text-utp-gold text-[10px] uppercase font-bold px-2 py-1 rounded">If Required</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-3">Suitable cotton fabrics are treated under controlled conditions using concentrated caustic soda.</p>
-                        <p class="text-xs text-utp-green font-medium"><span class="text-gray-900 font-bold">Purpose:</span> Improve lustre, dye affinity, and certain dimensional properties.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 border border-gray-200 rounded shadow-sm">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-bold text-lg text-utp-charcoal">8. Washing and Neutralization</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-3">Residual chemicals are removed or neutralized as required.</p>
-                        <p class="text-xs text-utp-green font-medium"><span class="text-gray-900 font-bold">Purpose:</span> Prepare the fabric for subsequent treatments.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 border border-gray-200 rounded shadow-sm">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-bold text-lg text-utp-charcoal">10. Solid Dyeing</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-3">Fabric is dyed to the specified solid shade.</p>
-                        <p class="text-xs text-utp-green font-medium"><span class="text-gray-900 font-bold">Purpose:</span> Achieve the required colour and shade consistency.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 border border-gray-200 rounded shadow-sm">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-bold text-lg text-utp-charcoal">11. Printing</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-3">Designs are applied using the appropriate printing technique.</p>
-                        <p class="text-xs text-utp-green font-medium"><span class="text-gray-900 font-bold">Purpose:</span> Produce the specified patterns, colours, and design appearance.</p>
-                    </div>
-                    
-                    <div class="bg-[#fffdf5] p-6 border border-utp-gold border-dashed rounded shadow-sm">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-bold text-lg text-utp-charcoal">12. Post-Dyeing / Printing Treatments</h3>
-                            <span class="bg-utp-gold/20 text-utp-gold text-[10px] uppercase font-bold px-2 py-1 rounded">As Applicable</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-3">Washing, soaping, fixation, curing, or other required treatments are selected according to the process used.</p>
-                        <p class="text-xs text-utp-green font-medium"><span class="text-gray-900 font-bold">Purpose:</span> Help achieve appropriate colour development, fixation, and removal of unwanted residues.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 border border-gray-200 rounded shadow-sm">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-bold text-lg text-utp-charcoal">13. Stentering and Width Setting</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-3">Fabric width and dimensional properties are controlled.</p>
-                        <p class="text-xs text-utp-green font-medium"><span class="text-gray-900 font-bold">Purpose:</span> Meet specified width and appearance requirements. Heat setting applies where suitable for the fibre composition.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 border border-gray-200 rounded shadow-sm">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-bold text-lg text-utp-charcoal">14. Finishing Treatments</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-3">Finishing may include softening, calendaring, or other specified mechanical or chemical treatments.</p>
-                        <p class="text-xs text-utp-green font-medium"><span class="text-gray-900 font-bold">Purpose:</span> Achieve the required handle, surface appearance, and functional properties.</p>
-                    </div>
-                    
-                    <div class="bg-[#fffdf5] p-6 border border-utp-gold border-dashed rounded shadow-sm">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-bold text-lg text-utp-charcoal">15. Sanforizing / Shrinkage Control</h3>
-                            <span class="bg-utp-gold/20 text-utp-gold text-[10px] uppercase font-bold px-2 py-1 rounded">If Required</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-3">Applied where required to achieve specified dimensional stability.</p>
-                        <p class="text-xs text-utp-green font-medium"><span class="text-gray-900 font-bold">Purpose:</span> Control residual shrinkage to meet buyer requirements.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 border border-gray-200 rounded shadow-sm">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-bold text-lg text-utp-charcoal">16. Final Inspection</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-3">Finished fabric is examined for visible defects, shade variation, width, appearance, and order-specific requirements.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 border border-gray-200 rounded shadow-sm">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-bold text-lg text-utp-charcoal">17. Quality Testing</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-3">Applicable tests may include colour fastness, dimensional stability, shrinkage, GSM, and other buyer-specified parameters.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 border border-gray-200 rounded shadow-sm">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-bold text-lg text-utp-charcoal">18. Rolling & Measurement</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-3">Approved fabric is rolled and measured according to the order specification.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 border border-gray-200 rounded shadow-sm">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-bold text-lg text-utp-charcoal">19. Packing</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-3">Fabric is packed, identified, and labelled according to the required packing instructions.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 border border-gray-200 rounded shadow-sm">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-bold text-lg text-utp-charcoal">20. Dispatch</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-3">Finished fabric is prepared for delivery according to the agreed order and delivery requirements.</p>
-                    </div>
+                <!-- Route Toggle -->
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16 relative z-20">
+                    <button onclick="setRoute('all')" id="btn-all" class="px-6 py-3 rounded-full font-bold bg-utp-green text-white shadow-lg transition-all transform hover:-translate-y-1 text-sm md:text-base">View Full Process</button>
+                    <button onclick="setRoute('solid')" id="btn-solid" class="px-6 py-3 rounded-full font-bold bg-gray-100 text-gray-500 hover:text-utp-green hover:bg-white shadow-sm transition-all border border-gray-200 transform hover:-translate-y-1 text-sm md:text-base">Solid-Dyed Route</button>
+                    <button onclick="setRoute('print')" id="btn-print" class="px-6 py-3 rounded-full font-bold bg-gray-100 text-gray-500 hover:text-utp-green hover:bg-white shadow-sm transition-all border border-gray-200 transform hover:-translate-y-1 text-sm md:text-base">Printed Route</button>
+                </div>
 
+                <!-- Timeline Container -->
+                <div class="relative border-l-4 border-gray-100 ml-4 md:ml-12 pb-12" id="timeline-container">
+                    <!-- Progress Bar (Draws on scroll) -->
+                    <div id="progress-line" class="absolute top-0 left-[-4px] w-1 bg-utp-green rounded-full transition-all duration-300" style="height: 0%;"></div>
+
+                    <!-- Steps generated via JS -->
                 </div>
             </div>
         </section>
 
         <!-- Section 4: Solid Dyeing vs. Printing -->
-        <section class="py-20 bg-white">
+        <section class="py-20 bg-gray-50 border-t border-gray-200">
             <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16 max-w-3xl mx-auto">
                     <h2 class="text-3xl font-bold font-heading text-utp-charcoal mb-4">Two Different Routes. One Quality-Focused Approach.</h2>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
-                    <div class="bg-utp-green text-white p-8 md:p-10 rounded-sm">
+                    <div class="bg-utp-green text-white p-8 md:p-10 rounded-2xl shadow-xl transform transition-transform hover:-translate-y-1">
                         <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-6">
                             <svg class="h-6 w-6 text-utp-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>
                         </div>
@@ -346,7 +72,7 @@
                         <p class="text-sm font-medium text-utp-gold italic">Both routes subsequently undergo the relevant finishing and inspection stages.</p>
                     </div>
                     
-                    <div class="bg-gray-50 border border-gray-200 p-8 md:p-10 rounded-sm">
+                    <div class="bg-white border border-gray-200 p-8 md:p-10 rounded-2xl shadow-xl transform transition-transform hover:-translate-y-1">
                         <div class="w-12 h-12 bg-utp-green/10 rounded-full flex items-center justify-center mb-6">
                             <svg class="h-6 w-6 text-utp-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                         </div>
@@ -359,9 +85,8 @@
         </section>
 
         <!-- Section 5 & 6: Finishing Parameters & Quality Control -->
-        <section class="py-20 bg-gray-50 border-t border-b border-gray-200">
+        <section class="py-20 bg-white border-t border-b border-gray-200">
             <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     <!-- Finishing & Quality Parameters -->
                     <div>
@@ -385,32 +110,32 @@
                     <!-- Quality Control -->
                     <div>
                         <h2 class="text-3xl font-bold font-heading text-utp-charcoal mb-6">Quality Checks Throughout</h2>
-                        <p class="text-gray-600 mb-8">Quality begins with understanding the order requirements and continues through fabric inspection, processing, finishing, and final verification. The applicable checks depend on the fabric, processing route, and buyer specifications.</p>
+                        <p class="text-gray-600 mb-8">Quality begins with understanding the order requirements and continues through fabric inspection, processing, finishing, and final verification.</p>
                         
                         <div class="space-y-4">
-                            <div class="flex items-start">
+                            <div class="flex items-start bg-gray-50 p-4 rounded-lg border border-gray-100 shadow-sm">
                                 <span class="bg-utp-green text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">1</span>
-                                <span class="text-gray-700 text-sm">Incoming fabric inspection</span>
+                                <span class="text-gray-700 text-sm font-medium">Incoming fabric inspection</span>
                             </div>
-                            <div class="flex items-start">
+                            <div class="flex items-start bg-gray-50 p-4 rounded-lg border border-gray-100 shadow-sm">
                                 <span class="bg-utp-green text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">2</span>
-                                <span class="text-gray-700 text-sm">Process and shade verification, as applicable</span>
+                                <span class="text-gray-700 text-sm font-medium">Process and shade verification, as applicable</span>
                             </div>
-                            <div class="flex items-start">
+                            <div class="flex items-start bg-gray-50 p-4 rounded-lg border border-gray-100 shadow-sm">
                                 <span class="bg-utp-green text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">3</span>
-                                <span class="text-gray-700 text-sm">Width and finishing checks</span>
+                                <span class="text-gray-700 text-sm font-medium">Width and finishing checks</span>
                             </div>
-                            <div class="flex items-start">
+                            <div class="flex items-start bg-gray-50 p-4 rounded-lg border border-gray-100 shadow-sm">
                                 <span class="bg-utp-green text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">4</span>
-                                <span class="text-gray-700 text-sm">Final visual inspection</span>
+                                <span class="text-gray-700 text-sm font-medium">Final visual inspection</span>
                             </div>
-                            <div class="flex items-start">
+                            <div class="flex items-start bg-gray-50 p-4 rounded-lg border border-gray-100 shadow-sm">
                                 <span class="bg-utp-green text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">5</span>
-                                <span class="text-gray-700 text-sm">Applicable quality testing</span>
+                                <span class="text-gray-700 text-sm font-medium">Applicable quality testing</span>
                             </div>
-                            <div class="flex items-start">
+                            <div class="flex items-start bg-gray-50 p-4 rounded-lg border border-gray-100 shadow-sm">
                                 <span class="bg-utp-green text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0 mt-0.5">6</span>
-                                <span class="text-gray-700 text-sm">Measurement, packing, and dispatch verification</span>
+                                <span class="text-gray-700 text-sm font-medium">Measurement, packing, and dispatch verification</span>
                             </div>
                         </div>
                     </div>
@@ -420,36 +145,160 @@
         </section>
 
         <!-- Section 7: Industries and Applications -->
-        <section class="py-20 bg-white">
+        <section class="py-20 bg-gray-50">
             <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-3xl font-bold font-heading text-utp-charcoal mb-4">Processing Solutions for Export Requirements</h2>
                 <p class="text-gray-600 text-lg mb-10 max-w-3xl mx-auto">We provide professional woven fabric processing for a wide range of industries.</p>
                 
                 <div class="flex flex-wrap justify-center gap-4">
-                    <span class="px-6 py-3 bg-gray-50 border border-gray-200 text-utp-charcoal font-medium rounded text-sm">Bedsheets and bed linen</span>
-                    <span class="px-6 py-3 bg-gray-50 border border-gray-200 text-utp-charcoal font-medium rounded text-sm">Pillow covers</span>
-                    <span class="px-6 py-3 bg-gray-50 border border-gray-200 text-utp-charcoal font-medium rounded text-sm">Woven bags</span>
-                    <span class="px-6 py-3 bg-gray-50 border border-gray-200 text-utp-charcoal font-medium rounded text-sm">Other woven textile products (as required)</span>
+                    <span class="px-6 py-3 bg-white shadow-sm border border-gray-200 text-utp-charcoal font-medium rounded-lg text-sm transition-transform hover:-translate-y-1">Bedsheets and bed linen</span>
+                    <span class="px-6 py-3 bg-white shadow-sm border border-gray-200 text-utp-charcoal font-medium rounded-lg text-sm transition-transform hover:-translate-y-1">Pillow covers</span>
+                    <span class="px-6 py-3 bg-white shadow-sm border border-gray-200 text-utp-charcoal font-medium rounded-lg text-sm transition-transform hover:-translate-y-1">Woven bags</span>
+                    <span class="px-6 py-3 bg-white shadow-sm border border-gray-200 text-utp-charcoal font-medium rounded-lg text-sm transition-transform hover:-translate-y-1">Other woven textile products (as required)</span>
                 </div>
             </div>
         </section>
-
-        <!-- Section 8: Final CTA -->
+        
+        <!-- Final CTA -->
         <section class="py-24 bg-utp-green text-white text-center">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6">Looking for a Textile Processing Partner?</h2>
-                <p class="text-lg text-gray-200 mb-10 max-w-2xl mx-auto">Share your fabric type, required shade or print, finishing specifications, quantity, and delivery requirements. Our team can discuss the suitable processing route for your order.</p>
+                <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6">Ready to Process Your Fabric?</h2>
+                <p class="text-lg text-gray-200 mb-10 max-w-2xl mx-auto">Share your fabric type, required shade, and delivery requirements. We will establish the perfect processing route for your export order.</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="/contact.html" class="btn btn-primary text-lg px-8 py-3">Contact Us</a>
-                    <a href="/contact.html" class="btn bg-transparent text-white border border-white hover:bg-white hover:text-utp-green transition-colors text-lg px-8 py-3">Discuss Your Requirements</a>
+                    <a href="/contact.html" class="btn btn-primary text-lg px-8 py-3 bg-utp-gold text-white hover:bg-white hover:text-utp-gold shadow-lg">Contact Us</a>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <utp-footer></utp-footer>
 
-    <script src="assets/js/components.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script>
+        const steps = [
+            { id: 1, title: 'Greige Fabric Receipt', type: 'all', req: 'Standard', purpose: 'Establish incoming fabric quantity and identify the material.', desc: 'Raw woven fabric is received according to the order requirements.' },
+            { id: 2, title: 'Greige Fabric Inspection', type: 'all', req: 'Standard', purpose: 'Identify defects and discrepancies before subsequent processing.', desc: 'Fabric is checked for visible defects, stains, holes, and width.' },
+            { id: 3, title: 'Singeing', type: 'all', req: 'Standard', purpose: 'Improve surface cleanliness and appearance.', desc: 'Loose surface fibres are removed by controlled burning.' },
+            { id: 4, title: 'Desizing', type: 'all', req: 'Conditional', purpose: 'Improve absorbency and prepare for wet processing.', desc: 'Warp sizing agents are removed where present.' },
+            { id: 5, title: 'Scouring', type: 'all', req: 'Standard', purpose: 'Improve fabric cleanliness and wetting behaviour.', desc: 'Natural waxes, oils, and other impurities are removed.' },
+            { id: 6, title: 'Bleaching', type: 'all', req: 'Conditional', purpose: 'Prepare fabric for dyeing or printing.', desc: 'Natural colouring matter is reduced when a light base is required.' },
+            { id: 7, title: 'Mercerizing', type: 'all', req: 'Conditional', purpose: 'Improve lustre, dye affinity, and dimensional properties.', desc: 'Treated under controlled conditions using concentrated caustic soda.' },
+            { id: 8, title: 'Washing and Neutralization', type: 'all', req: 'Standard', purpose: 'Prepare the fabric for subsequent treatments.', desc: 'Residual chemicals are removed or neutralized as required.' },
+            
+            // Branch Solid
+            { id: '10a', title: 'Solid Dyeing', type: 'solid', req: 'Standard', purpose: 'Achieve the required colour and shade consistency.', desc: 'Fabric is dyed to the specified solid shade.' },
+            { id: '11a', title: 'Required washing or soaping', type: 'solid', req: 'Standard', purpose: 'Remove unfixed dye and achieve fastness.', desc: 'Post-dyeing wash to clear excess dye particles.' },
+            
+            // Branch Print
+            { id: '10b', title: 'Printing', type: 'print', req: 'Standard', purpose: 'Produce specified patterns and designs.', desc: 'Designs are applied using the appropriate printing technique.' },
+            { id: '11b', title: 'Fixation or curing', type: 'print', req: 'Conditional', purpose: 'Colour development and fixation.', desc: 'Treatment depends on the printing method used.' },
+            { id: '12b', title: 'Post-print washing', type: 'print', req: 'Conditional', purpose: 'Removal of unwanted residues.', desc: 'Thorough wash to remove thickeners and unfixed dye.' },
+
+            // Merge
+            { id: 13, title: 'Stentering and Width Setting', type: 'all', req: 'Standard', purpose: 'Meet specified width and appearance requirements.', desc: 'Fabric width and dimensional properties are controlled.' },
+            { id: 14, title: 'Finishing Treatments', type: 'all', req: 'Standard', purpose: 'Achieve required handle and functional properties.', desc: 'Finishing may include softening or calendaring.' },
+            { id: 15, title: 'Sanforizing / Shrinkage Control', type: 'all', req: 'Conditional', purpose: 'Control residual shrinkage to meet buyer requirements.', desc: 'Applied to achieve specified dimensional stability.' },
+            { id: 16, title: 'Final Inspection', type: 'all', req: 'Standard', purpose: 'Ensure final product matches buyer specification.', desc: 'Finished fabric is examined for visible defects and shade variation.' },
+            { id: 17, title: 'Quality Testing', type: 'all', req: 'Standard', purpose: 'Verify technical performance.', desc: 'Tests include colour fastness, dimensional stability, and GSM.' },
+            { id: 18, title: 'Rolling & Measurement', type: 'all', req: 'Standard', purpose: 'Prepare for dispatch.', desc: 'Approved fabric is rolled and measured.' },
+            { id: 19, title: 'Packing', type: 'all', req: 'Standard', purpose: 'Protect fabric during transit.', desc: 'Fabric is packed and labelled according to instructions.' },
+            { id: 20, title: 'Dispatch', type: 'all', req: 'Standard', purpose: 'Fulfill the order.', desc: 'Finished fabric is prepared for delivery.' }
+        ];
+
+        const container = document.getElementById('timeline-container');
+        steps.forEach((step, index) => {
+            const isCond = step.req === 'Conditional';
+            const borderClass = isCond ? 'border-utp-gold border-dashed bg-[#fffdf5]/90' : 'border-gray-100 bg-white/80';
+            const dotClass = isCond ? 'bg-utp-gold' : 'bg-utp-green';
+            
+            // Note: We've removed the 'opacity-0 h-0 group-hover:h-auto' constraints. 
+            // The text is always visible so users get the full picture without clicking.
+            const html = `
+            <div class="relative pl-8 md:pl-12 pt-8 step-item" data-type="${step.type}">
+                <!-- Timeline Dot -->
+                <div class="absolute -left-[14px] top-14 h-6 w-6 rounded-full border-4 border-white ${dotClass} shadow-md z-10"></div>
+                
+                <!-- Card -->
+                <div class="backdrop-blur-md p-6 rounded-2xl shadow-sm border ${borderClass} hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex flex-col md:flex-row md:items-start justify-between mb-2 gap-4">
+                        <h3 class="font-bold text-xl text-utp-charcoal flex-1">
+                            <span class="text-gray-400 mr-2">${step.id}.</span>${step.title}
+                        </h3>
+                        ${isCond ? `<span class="inline-block bg-utp-gold/10 text-utp-gold text-[10px] uppercase font-bold px-3 py-1.5 rounded-full whitespace-nowrap self-start md:self-auto">If Required</span>` : ''}
+                    </div>
+                    
+                    <!-- Always Visible Content -->
+                    <div class="mt-3">
+                        <p class="text-gray-600 mb-4 text-base">${step.desc}</p>
+                        <div class="bg-gray-50/80 p-4 rounded-lg border-l-4 border-utp-green">
+                            <p class="text-sm text-gray-800"><span class="font-bold text-utp-green uppercase text-xs tracking-wider block mb-1">Purpose</span> ${step.purpose}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `;
+            container.insertAdjacentHTML('beforeend', html);
+        });
+
+        // Route Filtering Logic
+        function setRoute(type) {
+            // Update Buttons
+            const btns = ['all', 'solid', 'print'];
+            btns.forEach(b => {
+                const el = document.getElementById('btn-' + b);
+                if(b === type) {
+                    el.className = 'px-6 py-3 rounded-full font-bold bg-utp-green text-white shadow-lg transition-all transform hover:-translate-y-1 text-sm md:text-base';
+                } else {
+                    el.className = 'px-6 py-3 rounded-full font-bold bg-white text-gray-500 hover:text-utp-green hover:bg-gray-50 shadow-sm transition-all border border-gray-200 transform hover:-translate-y-1 text-sm md:text-base';
+                }
+            });
+
+            // Update Timeline Items
+            const items = document.querySelectorAll('.step-item');
+            items.forEach(item => {
+                const itemType = item.getAttribute('data-type');
+                if (type === 'all' || itemType === 'all' || itemType === type) {
+                    item.style.display = 'block';
+                    item.style.opacity = '0';
+                    setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'translateY(0)'; }, 50);
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            
+            // Recalculate progress line length
+            setTimeout(handleScroll, 100);
+        }
+
+        // Scroll Progress Line Logic
+        function handleScroll() {
+            const container = document.getElementById('timeline-container');
+            const line = document.getElementById('progress-line');
+            if(!container || !line) return;
+            
+            const rect = container.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            
+            if (rect.top > viewportHeight / 2) {
+                line.style.height = '0%';
+                return;
+            }
+            
+            const scrollDistance = (viewportHeight / 2) - rect.top;
+            const maxDistance = rect.height;
+            
+            let percentage = (scrollDistance / maxDistance) * 100;
+            percentage = Math.max(0, Math.min(100, percentage));
+            
+            line.style.height = percentage + '%';
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleScroll);
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            setRoute('all');
+            handleScroll();
+        });
+    </script>
 </body>
 </html>
